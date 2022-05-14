@@ -1,0 +1,116 @@
+.globalContent {
+  width: 86%;
+  margin-top: 100px;
+  margin-left: 80px;
+  height: 850px;
+  background-color: #ecece4;
+  display: flex;
+}
+.content {
+  width: 74%;
+  height: 400px;
+  margin-left: 102px;
+  margin-top: 80px;
+}
+.content > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 5px -7px 12px 0px #0a0a0a80;
+          box-shadow: 5px -7px 12px 0px #0a0a0a80;
+}
+.titleName {
+  position: absolute;
+  top:  590px;
+  left: 300px;
+}
+.titleName .main {
+  text-shadow: 1px 2px 3px #808080;
+  width: 1000px;
+  font-size: 70px;
+  font-family: "Times New Roman", Times, serif;
+}
+.spanColor{
+  color:#871b28 ;
+  font-size: 1.3em;
+}
+
+/* .titleName #sub {
+  position: absolute;
+  width: 800px;
+  font-weight: 600;
+  left: -100px;
+  letter-spacing: 3px;
+  font-size: 20px;
+} */
+.sub{
+  position: absolute;
+  width: 800px;
+  font-weight: 600;
+  left: -100px;
+  margin-top: -20px;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+@media screen and (max-width: 430px) {
+  .globalContent {
+    width: 60%;
+    margin-top: 40px;
+    height: 500px;
+    /* background-color: #ecece4; */
+    display: block;
+  }
+  .content{
+    width: 100%;
+    height: 45%;
+    margin-left: 65px;
+    margin-top: 83px;
+  }
+  .content > img{
+ margin-top: 50px;  
+  position: absolute;
+  left: 35px;
+  width: 300px;
+  height: 200px; 
+  }
+  .titleName{
+    position: relative;
+    top: -35px;
+    left: -180px;
+  }
+  .titleName #sub {
+    width: 320px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 12px;
+    left: 0px;
+    top: 50px;
+  }
+
+  .sub{
+  width: 300px;
+  left: 123px;
+  font-weight: 700 ;
+  margin-top:-20px;
+  font-size: 10px;
+  }
+  
+  .titleName .main {
+    text-shadow: 1px 2px 3px #808080;
+    /* 3px 1px 3px #808080 */
+    width: 310px !important;
+    font-size: 45px !important;
+    margin-left: 120px;
+    margin-top: 100px;
+  }
+
+.content {
+    /* width: 100vw; */
+    height: 200px;
+    margin-top: 80px;
+}
+.main{
+  width: 300px;
+}
+}

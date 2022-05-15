@@ -457,6 +457,24 @@ a {
   .price-area{
     margin-top: 10px;
   }
+  .readMoreBtn{
+    position: relative;
+    left: 80px;
+    background-color:#871b28 ;
+    border: 1px solid black;
+    font-weight: 600;
+    padding: 10px 40px;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 20px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: white;
+    text-decoration: none !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .reset-button{right: 260px;}

@@ -24,7 +24,7 @@ export async function getServerSideProps() {
 
 export default function Home({ data }) {
   const [categoryValue, setCategoryValue] = useState({});
-  const { ref, inView } = useInView({delay:2000});
+  const { ref, inView } = useInView({delay:1000});
   const {
     results_available = 0,
     results_start = 1,
@@ -177,8 +177,9 @@ export default function Home({ data }) {
           <div></div>
         ) : ( */}
           {/* <div className="">
+            <p>上手く読み込まない場合はボタンを押してください</p>
             <button
-              className=""
+              className="readMoreBtn"
               onClick={handlerOnClickReadMore}
             >
               もっと読む

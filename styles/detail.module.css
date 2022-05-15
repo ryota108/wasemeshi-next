@@ -211,40 +211,11 @@
   .imgBx img {
     opacity: 0.8;
   }
-  .images {
-    background-color: #fff;
-    background-image: linear-gradient(
-        transparent 95%,
-        rgba(0, 0, 0, 0.06) 50%,
-        rgba(0, 0, 0, 0.06)
-      ),
-      linear-gradient(
-        90deg,
-        transparent 95%,
-        rgba(0, 0, 0, 0.06) 50%,
-        rgba(0, 0, 0, 0.06)
-      );
-    background-size: 16px 16px;
-    background-repeat: repeat;
-    width: 320px;
-    height: 10vw;
-    height: 300px;
-  }
   .detailTopic {
     position: absolute;
     left: 90px;
     top: 100px;
     font-size: 35px;
-  }
-  .detailSlide {
-    top: -80px;
-    margin-bottom: 0px;
-  }
-  .detailSlide img {
-    left: 56%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 70%;
   }
   .detailMap {
     margin-left: 10px;
@@ -265,8 +236,8 @@
     margin-left: 0px;
   }
   .logoImg {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
   }
   .shopName {
@@ -383,12 +354,16 @@
     border-radius: 20px;
   }
   .moneyIcon{
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
+    margin-left: 20px;
+    margin-top: 10px;
     color: rgb(159, 159, 102);
   }
-  .budgetText{
-    
+  .mycomment .budgetText{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 20px;
   }
   .mapSectionTitle{
     display: flex;
@@ -404,4 +379,99 @@
    font-family: 'Times New Roman', Times, serif;
    font-weight: 800;
  }
+ .lineBc { 
+  background: url("/images/waseda.jfif");
+  max-width: 450px;
+  background-size: cover;
+  filter: grayscale(0.8);
+  /* margin: 15px auto; */
+}
+
+/*以下、②左側のコメント*/
+.balloon6 {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.balloon6 .faceicon {
+  float: left;
+  margin-right: -50px;
+  width: 50px;
+}
+
+.balloon6 .faceicon img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.balloon6 .chatting {
+  width: 100%;
+  text-align: left;
+}
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 0 0 0 50px;
+  padding: 10px;
+  max-width: 250px;
+  border-radius: 12px;
+  background: #edf1ee;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px; 
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid #edf1ee;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+.says p {
+  margin: 0;
+  padding: 0;
+}
+
+/*以下、③右側の緑コメント*/
+.mycomment {
+  margin-top: -25px;
+  margin-left:40%;
+}
+.mycomment p {
+  display: inline-block;
+  position: relative; 
+  margin: 0 10px 0 0;
+  padding: 8px;
+  max-width: 250px;
+  border-radius: 12px;
+  background-color: rgba(168, 147, 123, 0.164);
+  font-size: 15px;
+}
+
+.mycomment p:after {
+  content: "";
+  position: absolute;
+  top: 3px; 
+  right: -19px;
+  border: 8px solid transparent;
+  border-left: 18px solid  rgba(168, 147, 123, 0.164);;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+.shopIcon{
+  margin-left:80%;
+}
+.calenderIcon{
+  width: 50px;
+  height: 50px;
+  margin: 10px 20px;
+}
+.mycomment .calenderText{
+ text-align: center;
+ font-size: 20px;
+ font-weight: bold;
+}
 }

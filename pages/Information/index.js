@@ -15,7 +15,7 @@ const Tweet = () => {
     <Header/>
      <div  style={{marginTop:"75px"}}>
       <a
-      class="twitter-timeline"
+      className="twitter-timeline"
       data-align="center"
       data-width="600"
       data-height="1000"

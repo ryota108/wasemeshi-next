@@ -10,6 +10,8 @@ import {FaMoneyBillWaveAlt} from "react-icons/fa";
 import {GiMoneyStack} from "react-icons/gi";
 import {BsCashCoin} from "react-icons/bs";
 import {AiFillHome} from "react-icons/ai";
+import {BsFillCalendarCheckFill} from "react-icons/bs";
+
 import Link from "next/link";
 import classes from "../../styles/detail.module.css";
 import Header from "../../component/Header/Header";
@@ -29,7 +31,9 @@ const Detail = ({ data }) => {
   const privateRoom = searchString(data.results.shop[0].private_room, "あり") ;
   const midnight = searchString(data.results.shop[0].midnight, "営業している");
   const length = data.results.shop[0].name.length
-
+  const openLength = data.results.shop[0].close.length === 2
+  const toggleOpenIcon = openLength ?  <BsFillCalendarCheckFill className={classes.calenderIcon} />: null;
+  console.log(openLength);
   const moneyCategory = (price)=>{
     let moneyIcon;
    switch (price){
@@ -73,20 +77,63 @@ const Detail = ({ data }) => {
           </div>
         </div>
       </div>
-      <img className="shop-img" src={data.results.shop[0].photo.pc.l} />
-      <img className={classes.logoImg} src={data.results.shop[0].logo_image} />
+      <img className="classes.shopImg" src={data.results.shop[0].photo.pc.l} />
       <h2 className={classes.catch}>{data.results.shop[0].genre.catch}</h2>
+      <div className={classes.lineBc}>
       <hr
         className={classes.mainBorder}
         color="#871b28"
         width="100%"
         align="left"
       />
+  <div className={classes.balloon6}>
+    <div className={classes.faceicon}>
+      <img  src="/images/logoCopy-min.png"/>
+    </div>
+    <div className={classes.chatting}>
+      <div className={classes.says}>
+        <p>予算</p>
+      </div>
+    </div>
+  </div>
+  <div className={classes.shopIcon}>
+  <img className={classes.logoImg} src={data.results.shop[0].logo_image} />
+  </div>
+  <div className={classes.mycomment}>
+  <p className={classes.budgetText}>
+    {moneyCategory(data.results.shop[0].budget.name)}
+    <br/>
+    {data.results.shop[0].budget.name}
+    </p>
+  </div>
+  <div className={classes.balloon6}>
+    <div className={classes.faceicon}>
+      <img  src="/images/logoCopy-min.png"/>
+    </div>
+    <div className={classes.chatting}>
+      <div className={classes.says}>
+        <p>定休日</p>
+      </div>
+    </div>
+  </div>
+  <div className={classes.shopIcon}>
+  <img className={classes.logoImg} src={data.results.shop[0].logo_image} />
+  </div>
+  <div className={classes.mycomment}>
+    <p className={classes.calenderText}>
+      {toggleOpenIcon}
+      <br/>
+    {data.results.shop[0].close}
+    </p>
+  </div>
+  
+</div>
+
       <ul className={classes}>
         <li className={classes.informationList}>
           <p>{data.results.shop[0].other_memo}</p>
         </li>
-        <li className={classes.informationList}>
+        {/* <li className={classes.informationList}>
           <h4>予算</h4>
           {moneyCategory(data.results.shop[0].budget.name)}
           <p className={classes.budgetText}>{data.results.shop[0].budget.name}</p>
@@ -94,7 +141,7 @@ const Detail = ({ data }) => {
         <li className={classes.informationList}>
           <h4>定休日</h4>
           <p>{data.results.shop[0].close}</p>
-        </li>
+        </li> */}
         <h2 className={classes.informationTitle}><span className={classes.informationSpan}>O</span>ther Memo</h2>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           <li className={`${card  ? classes.informationBox:classes.informationNoSomething}`}>

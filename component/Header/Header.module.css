@@ -102,46 +102,6 @@
   -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
-
-.global-content {
-  width: 86%;
-  margin-top: 100px;
-  margin-left: 80px;
-  height: 500px;
-  background-color: #ecece4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.content {
-  width: 38%;
-  height: 74%;
-  margin-left: 65px;
-  margin-top: 80px;
-}
-
-.content > img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-box-shadow: 5px -7px 12px 0px #0a0a0a80;
-          box-shadow: 5px -7px 12px 0px #0a0a0a80;
-}
-
-.title-name {
-  width: 400px;
-  height: 100px;
-  margin-left: 120px;
-  margin-top: 120px;
-}
-
-.titleName .main {
-  font-size: 50px;
-  margin-bottom: 0px;
-}
-
 .titleName .main > span {
   color: #871b28;
 }
@@ -193,7 +153,7 @@
   z-index: -1;
   top: 1360px;
 }
-.mobile-menu-icon {
+.mobileMenuIcon {
   opacity:0;
 }
 .top-button{
@@ -202,7 +162,7 @@
 
 
 @media screen and (max-width:450px){
-  .mobile-menu-icon {
+  .mobileMenuIcon {
     margin-left: 65px;
     margin-top: 5px;
     background-color: unset;
@@ -211,21 +171,21 @@
     cursor: pointer;
     opacity: 1;
   }
-  .mobile-menu-icon.menu-open > span:nth-child(1) {
+  .mobileMenuIcon.menuOpen > span:nth-child(1) {
     -webkit-transition-delay: 70ms;
             transition-delay: 70ms;
     -webkit-transform: translateY(11px) rotate(135deg);
             transform: translateY(11px) rotate(135deg);
   }
   
-  .menu-open.mobile-menu-icon > span:nth-child(2) {
+  .menuOpen.mobileMenuIcon > span:nth-child(2) {
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
     -webkit-transform: translateX(-18px) scaleX(0);
             transform: translateX(-18px) scaleX(0);
   }
   
-  .menu-open.mobile-menu-icon > span:nth-child(3) {
+  .menuOpen.mobileMenuIcon > span:nth-child(3) {
     -webkit-transition-delay: 140ms;
             transition-delay: 140ms;
     -webkit-transform: translateY(-11px) rotate(-135deg);
@@ -253,7 +213,7 @@
     font-size: 12px;
     font-weight: 700;
   }
-  .mobile-menu-icon > span {
+  .mobileMenuIcon > span {
     background-color: black;
     width: 35px;
     height: 2px;
@@ -354,7 +314,7 @@
   height: 50px;
   background-color: #871b28;
   border-radius: 50%;
-  box-shadow:  2px 6px 0px #000000bf;
+  box-shadow: 2px 1px 5px #000000bf
 }
 
 .upArrow{
@@ -365,10 +325,10 @@
 }
 }
 @media screen and (max-width:350px){
-  .mobile-menu-icon {
+  .mobileMenuIcon {
     margin-left: 45px;
   }
-  .mobile-menu-icon > span {
+  .mobileMenuIcon > span {
     width: 32px;
   }
   .header{

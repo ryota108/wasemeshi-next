@@ -32,7 +32,8 @@ const Header = (props) => {
         {/* </Link> */}
         <button
           onClick={mobileMenuHandler}
-          className={`mobile-menu-icon ${clicked ? " menu-open" : ""}`}
+          // className={`mobile-menu-icon ${clicked ? " menu-open" : ""}`}
+          className={`${classes.mobileMenuIcon} ${clicked ? classes.menuOpen: ""}`}
         >
           <span></span>
           <span></span>
@@ -52,7 +53,7 @@ const Header = (props) => {
           </li>
         </ul>
       </header>
-      <div className={classes.topButton}><a href="#top"><MdKeyboardArrowUp className="upArrow"/></a></div>
+      <div className={classes.topButton}><a href="#top"><MdKeyboardArrowUp className={classes.upArrow}/></a></div>
       {clicked && (
         <div className="menu-opened">
           <ul className={`${clicked ? "fadeRight": ""}`}>

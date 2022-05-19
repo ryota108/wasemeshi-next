@@ -10,7 +10,11 @@ import {FaMoneyBillWaveAlt} from "react-icons/fa";
 import {GiMoneyStack} from "react-icons/gi";
 import {BsCashCoin} from "react-icons/bs";
 import {AiFillHome} from "react-icons/ai";
+import {MdArrowBackIosNew} from "react-icons/md";
 import {BsFillCalendarCheckFill} from "react-icons/bs";
+import {IoCallOutline} from "react-icons/io5";
+import FadeUp from "../../component/UI/FadeUp";
+import ShowUp from "../../component/UI/ShowUp";
 
 import Link from "next/link";
 import classes from "../../styles/detail.module.css";
@@ -41,6 +45,7 @@ const Detail = ({ data }) => {
        moneyIcon = <RiCoinFill className={classes.moneyIcon}/>;
        break;
      case "1001～2000円":
+     case "1501～2000円":
        moneyIcon = <GiTwoCoins className={classes.moneyIcon}/>;
        break;
      case "2001～3000円":
@@ -77,73 +82,99 @@ const Detail = ({ data }) => {
           </div>
         </div>
       </div>
-      <img className="classes.shopImg" src={data.results.shop[0].photo.pc.l} />
+      <img src="/images/finish.png" className={classes.finishIcon}/>
+      <div className={classes.shopImgBx} style={{display:"flex"}}>
+      <img src="/images/7.png" className={classes.pushIcon}/>
+      <img className={classes.shopImg} src={data.results.shop[0].photo.pc.l} />
+      </div>
       <h2 className={classes.catch}>{data.results.shop[0].genre.catch}</h2>
+      <img src="/images/4.png" width="100px"/>
       <div className={classes.lineBc}>
-      <hr
-        className={classes.mainBorder}
-        color="#871b28"
-        width="100%"
-        align="left"
-      />
-  <div className={classes.balloon6}>
+      <div className={classes.informationChatBar}>
+       <MdArrowBackIosNew size="30px" className={classes.barArrow}/> <h3 className={classes.shopBarName}>{data.results.shop[0].name}</h3>
+        <IoCallOutline className={classes.callIcon} size="30px"/>
+      </div>
+  <div className={classes.balloon1}>
     <div className={classes.faceicon}>
       <img  src="/images/logoCopy-min.png"/>
     </div>
+    <ShowUp delay="1000">
     <div className={classes.chatting}>
       <div className={classes.says}>
         <p>予算</p>
       </div>
     </div>
+    </ShowUp>
   </div>
   <div className={classes.shopIcon}>
   <img className={classes.logoImg} src={data.results.shop[0].logo_image} />
   </div>
-  <div className={classes.mycomment}>
+  <ShowUp delay="1100">
+  <div className={classes.myCommentBudget}>
   <p className={classes.budgetText}>
     {moneyCategory(data.results.shop[0].budget.name)}
     <br/>
     {data.results.shop[0].budget.name}
     </p>
   </div>
+  </ShowUp>
   <div className={classes.balloon6}>
     <div className={classes.faceicon}>
       <img  src="/images/logoCopy-min.png"/>
     </div>
+    <ShowUp delay="1150">
     <div className={classes.chatting}>
       <div className={classes.says}>
         <p>定休日</p>
       </div>
     </div>
+    </ShowUp>
   </div>
   <div className={classes.shopIcon}>
   <img className={classes.logoImg} src={data.results.shop[0].logo_image} />
   </div>
-  <div className={classes.mycomment}>
+  <ShowUp delay="1300">
+  <div className={`${classes.mycomment} ${classes.close}`}>
     <p className={classes.calenderText}>
       {toggleOpenIcon}
-      <br/>
+      {/* <br/> */}
     {data.results.shop[0].close}
     </p>
   </div>
+  </ShowUp>
+  <div className={classes.balloon6}>
+    <div className={classes.faceicon}>
+      <img  src="/images/logoCopy-min.png"/>
+    </div>
+    <ShowUp delay="1300">
+    <div className={classes.chatting}>
+      <div className={classes.says}>
+        <p>営業時間</p>
+      </div>
+    </div>
+    </ShowUp>
+  </div>
+  <div className={classes.shopIcon}>
+  <img className={classes.logoImg} src={data.results.shop[0].logo_image} />
+  </div>
+  <ShowUp delay="1500">
+  <div className={`${classes.mycomment} ${classes.open}`}>
+    <p className={classes.calenderText}>
+      {/* <br/> */}
+    {data.results.shop[0].open}
+    </p>
+  </div>
+  </ShowUp>
   
 </div>
 
       <ul className={classes}>
         <li className={classes.informationList}>
-          <p>{data.results.shop[0].other_memo}</p>
         </li>
-        {/* <li className={classes.informationList}>
-          <h4>予算</h4>
-          {moneyCategory(data.results.shop[0].budget.name)}
-          <p className={classes.budgetText}>{data.results.shop[0].budget.name}</p>
-        </li>
-        <li className={classes.informationList}>
-          <h4>定休日</h4>
-          <p>{data.results.shop[0].close}</p>
-        </li> */}
         <h2 className={classes.informationTitle}><span className={classes.informationSpan}>O</span>ther Memo</h2>
+          <FadeUp>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
+
           <li className={`${card  ? classes.informationBox:classes.informationNoSomething}`}>
             <AiFillCreditCard className={classes.informationIcon} size="50px" />
             <p className={classes.creditCardText}>{data.results.shop[0].card}</p>
@@ -173,6 +204,7 @@ const Detail = ({ data }) => {
                 : "営業外"}</p>
           </li>
         </div>
+          </FadeUp>
       </ul>
       <div className={classes.mapSectionTitle}>
       <h1><span className={classes.mapSpan}>M</span>ap</h1><img src="/images/mapHuman-min.png" width="125px"/>
@@ -180,7 +212,7 @@ const Detail = ({ data }) => {
       <iframe
         src={`https://maps.google.com/maps?output=embed&q=${data.results.shop[0].name}&${data.results.shop[0].address}ll=${data.results.shop[0].lat},${data.results.shop[0].allowfullScreenlng}&t=m&hl=ja&z=18`}
         width="100%"
-        height="250"
+        height="400"
         frameBorder="0"
         allowFullScreen=""
       ></iframe>

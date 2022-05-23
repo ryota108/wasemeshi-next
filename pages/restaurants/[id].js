@@ -19,7 +19,7 @@ import ShowUp from "../../component/UI/ShowUp";
 import Link from "next/link";
 import classes from "../../styles/detail.module.css";
 import Header from "../../component/Header/Header";
-const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場`;
+const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場&type=credit_card`;
 
 const Detail = ({ data }) => {
   const random = Math.floor(Math.random() * 11);
@@ -35,9 +35,9 @@ const Detail = ({ data }) => {
   const privateRoom = searchString(data.results.shop[0].private_room, "あり") ;
   const midnight = searchString(data.results.shop[0].midnight, "営業している");
   const length = data.results.shop[0].name.length
-  const openLength = data.results.shop[0].close.length === 2
+  const closeLength = data.results.shop[0].close.length < 5;
+  const openLength = data.results.shop[0].close.length === 2;
   const toggleOpenIcon = openLength ?  <BsFillCalendarCheckFill className={classes.calenderIcon} />: null;
-  console.log(openLength);
   const moneyCategory = (price)=>{
     let moneyIcon;
    switch (price){
@@ -59,7 +59,8 @@ const Detail = ({ data }) => {
    }
    return moneyIcon;
   }
-  
+  // console.log(data.results.shop[0].credit_card)
+  // data.results.shop[0].credit_card.map((card)=>{console.log(card.name)})
   return (
     <>
       <Header />
@@ -88,7 +89,12 @@ const Detail = ({ data }) => {
       <img className={classes.shopImg} src={data.results.shop[0].photo.pc.l} />
       </div>
       <h2 className={classes.catch}>{data.results.shop[0].genre.catch}</h2>
-      <img src="/images/4.png" width="100px"/>
+      <img src="/images/cheer.png" className={classes.cheerIcon} width="100px"/>
+      <div className="flex">
+        <img src="/images/comment.png" className={classes.comment}/>
+      <h1 className={`${classes.informationSectionTitle}`}><span>I</span>nformation</h1>
+      <img src="/images/phone.png" width="100px" className={classes.phoneIcon}/>
+      </div>
       <div className={classes.lineBc}>
       <div className={classes.informationChatBar}>
        <MdArrowBackIosNew size="30px" className={classes.barArrow}/> <h3 className={classes.shopBarName}>{data.results.shop[0].name}</h3>
@@ -134,7 +140,7 @@ const Detail = ({ data }) => {
   <img className={classes.logoImg} src={data.results.shop[0].logo_image} />
   </div>
   <ShowUp delay="1300">
-  <div className={`${classes.mycomment} ${classes.close}`}>
+  <div className={` ${ closeLength ? classes.shortClose : classes.close} ${classes.mycomment}`}>
     <p className={classes.calenderText}>
       {toggleOpenIcon}
       {/* <br/> */}
@@ -167,7 +173,6 @@ const Detail = ({ data }) => {
   </ShowUp>
   
 </div>
-
       <ul className={classes}>
         <li className={classes.informationList}>
         </li>

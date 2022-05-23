@@ -11,7 +11,9 @@ import { FaMoneyBillWaveAlt } from "react-icons/fa";
 import { GiMoneyStack } from "react-icons/gi";
 import { BsCashCoin } from "react-icons/bs";
 import classes from "../../styles/Category.module.css";
+import {BiSortDown} from "react-icons/bi";
 import { useState } from "react";
+import FadeUp from "../UI/FadeUp";
 
 const Category = (props) => {
   const [clickDetail, setClickDetail] = useState(false);
@@ -83,7 +85,7 @@ const Category = (props) => {
     <>
       {/* <div><h3></h3></div> */}
       {clickDetail && (
-        <>
+        <FadeUp>
           <div className={classes.genreSearch}>
             <h3 className={classes.sectionTitle}>ジャンルから探す</h3>
             <ul className={classes.categoryAll}>
@@ -212,7 +214,7 @@ const Category = (props) => {
               </button>
             </div>
           </div>
-        </>
+        </FadeUp>
       )}
       <button onClick={clickDetailHandler} className={classes.detailButton}>
         条件の絞り込み
@@ -222,6 +224,7 @@ const Category = (props) => {
           <FaMinus className={classes.icon} size="15px" />
         )}
       </button>
+      <button className={classes.sortBtn}><BiSortDown className={classes.sortIcon} size="25px"/></button>
     </>
   );
 };

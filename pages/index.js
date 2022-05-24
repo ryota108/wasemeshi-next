@@ -25,6 +25,11 @@ export async function getServerSideProps() {
 export default function Home({ data }) {
   const [categoryValue, setCategoryValue] = useState({});
   const { ref, inView } = useInView({delay:1000});
+  const [reset,setReset] = useState(false);
+  const resetHandler = ()=>{
+   setReset((prev)=>!prev);
+   console.log(reset);
+  }
   const {
     results_available = 0,
     results_start = 1,
@@ -40,7 +45,7 @@ export default function Home({ data }) {
   })
   
   const [keyword, setKeyword] = useState('')
-
+ console.log(categoryValue);
   useEffect(() => {
     if (keyword === '') return
 
@@ -93,7 +98,61 @@ export default function Home({ data }) {
 
     request()
   }, [page.results_start])
+  
+// useEffect(()=>{
+  // category検索をここに実装
+//   if ( typeof categoryValue.twoCoin  === undefined  ) return
 
+//   const params = {category: categoryValue}
+//   const query = new URLSearchParams(params)
+//   const request = async () => {
+//     const res = await fetch(`/api/search?${query}`)
+//     const data = await res.json()
+//     const nextData = data.results
+    
+//     updatePage({
+//       results_available: nextData.results_available,
+//       results_returned: nextData.results_returned,
+//       results_start: nextData.results_start,
+//     })
+
+//     if (nextData.results_start === 1) {
+//       updateShops(nextData.shop)
+//       return
+//     }
+   
+//     updateShops((prev) => {
+//       return [...prev, ...nextData.shop]
+//     })
+//   }
+//   request()
+// },[categoryValue.twoCoin])
+// useEffect(()=>{
+//   if (reset === false) return
+//   const params = {reset:reset}
+//     const query = new URLSearchParams(params)
+//     const request = async () => {
+//       const res = await fetch(`/api/search?${query}`)
+//       const data = await res.json()
+//       const nextData = data.results
+      
+//       updatePage({
+//         results_available: nextData.results_available,
+//         results_returned: nextData.results_returned,
+//         results_start: nextData.results_start,
+//       })
+  
+//       if (nextData.results_start === 1) {
+//         updateShops(nextData.shop)
+//         return
+//       }
+     
+//       updateShops((prev) => {
+//         return [...prev, ...nextData.shop]
+//       })
+//     }
+//     request()
+// },[reset])
  useEffect(()=>{
    if (inView === false) return
   updatePage((prev) => {
@@ -148,11 +207,12 @@ export default function Home({ data }) {
               </button>
             </form>
         <Category onSubmit={submitCategoryHandler}/>
-        <div style={{display:"flex"}}><span className="resultReturn">{page.results_available}</span> <h3>件</h3></div>
-        <ul style={{display:"flex",flexWrap:"wrap"}}>
+        <div className='flex'><span className="resultReturn">{page.results_available}</span> <h3>件</h3></div>
+              <button onClick={resetHandler}>Reset</button>
+        <ul className="flex" style={{flexWrap:"wrap"}}>
           {shop.map((item, index) => {
             return (
-              <FadeUp>
+              <FadeUp key={index}>
               <li className="shop" key={index}>
        <Link href={`restaurants/${item.id}`} >
          <div className="shop-card">

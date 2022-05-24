@@ -14,10 +14,13 @@ export default async (req, res) => {
     url = `${url}&start=${req.query.start}`
   }
   
-  // if(req.query.category.oneCoin === true){
-  //   url = `${url}&budget=B002`
+  // if(typeof req.query.category.twoCoin !== undefined && req.query.category.twoCoin !== false ) {
+  //   url = `${url}&budget=B001`
+  // }  
+  // これで取得は出来るが検索ワードが使用できなくなる、また総数も変化なし
+  // if( typeof req.query.reset !== undefined){
+  //   url = defaultEndpoint
   // }
-
   // if(typeof req.query.id !== undefined){
   //   url = `${url}&id=${req.query.id}`
   // }

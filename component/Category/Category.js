@@ -2,7 +2,7 @@ import { FaSearchDollar } from "react-icons/fa";
 import { IoMdFunnel } from "react-icons/io";
 import { FaMinus } from "react-icons/fa";
 import { GiMeat } from "react-icons/gi";
-import { MdRamenDining } from "react-icons/md";
+import { MdCleaningServices, MdRamenDining } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosCafe } from "react-icons/io";
 import { RiCoinFill } from "react-icons/ri";
@@ -11,7 +11,8 @@ import { FaMoneyBillWaveAlt } from "react-icons/fa";
 import { GiMoneyStack } from "react-icons/gi";
 import { BsCashCoin } from "react-icons/bs";
 import classes from "../../styles/Category.module.css";
-import {BiSortDown} from "react-icons/bi";
+import { BiSortDown } from "react-icons/bi";
+import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import FadeUp from "../UI/FadeUp";
 
@@ -83,7 +84,121 @@ const Category = (props) => {
 
   return (
     <>
-      {/* <div><h3></h3></div> */}
+      <div className={classes.laptopCategory}>
+        <div className="flex">
+          <FaSearch size="20px" className={classes.searchIcon} />
+          <h2 className={classes.genreTitle}>ジャンルから探す</h2>
+        </div>
+        <ul className="flex">
+          <li className={classes.categoryList}>
+            <div className={classes.categoryBtn}>
+              <img
+                className={classes.categoryImg}
+                src="/images/cafeCategory.jpg"
+              />
+              <h2 className={classes.categoryText}>カフェ</h2>
+            </div>
+          </li>
+          <li className={classes.categoryList}>
+            <div className={classes.categoryBtn}>
+              <img
+                className={classes.categoryImg}
+                src="/images/meatcategory.jpg"
+              />
+              <h2 className={classes.categoryText}>肉料理</h2>
+            </div>
+          </li>
+          <li className={classes.categoryList}>
+            <div className={classes.categoryBtn}>
+              <img
+                className={classes.categoryImg}
+                src="/images/ramenCategory.jpg"
+              />
+              <h2 className={classes.categoryText}>麵料理</h2>
+            </div>
+          </li>
+        </ul>
+        <div className="flex">
+          <FaSearch size="20px" className={classes.searchIcon} />
+          <h2 className={classes.genreTitle}>利用シーンから探す</h2>
+        </div>
+        <ul className="flex">
+          <li className={classes.categoryList}>
+            <div className={classes.categoryBtn}>
+              <img
+                className={classes.categoryImg}
+                src="/images/studyCategory.jpg"
+              />
+              <h2 className={classes.categoryText}>勉強</h2>
+            </div>
+          </li>
+          <li className={classes.categoryList}>
+            <div className={classes.categoryBtn}>
+              <img
+                className={classes.categoryImg}
+                src="/images/dateCategory.jpg"
+              />
+              <h2 className={classes.categoryText}>デート</h2>
+            </div>
+          </li>
+          <li className={classes.categoryList}>
+            <div className={classes.categoryBtn}>
+              <img
+                className={classes.categoryImg}
+                src="/images/ramenCategory.jpg"
+              />
+              <h2 className={classes.categoryText}>麵料理</h2>
+            </div>
+          </li>
+        </ul>
+        <ul className={classes.moneyCategory}>
+              <li
+                className={`${
+                  clickOneCoin ? classes.moneyBoxClicked : classes.moneyBox
+                }`}
+                onClick={clickOneCoinHandler}
+              >
+                <RiCoinFill className={classes.moneyIcon} />
+                <p className={classes.moneyExplain}>¥~1000</p>
+              </li>
+              <li
+                className={`${
+                  clickTwoCoin ? classes.moneyBoxClicked : classes.moneyBox
+                }`}
+                onClick={clickTwoCoinHandler}
+              >
+                <GiTwoCoins className={classes.moneyIcon} />
+                <p className={classes.moneyExplainLong}>¥1001~¥2000</p>
+              </li>
+              <li
+                className={`${
+                  clickOneBill ? classes.moneyBoxClicked : classes.moneyBox
+                }`}
+                onClick={clickOneBillHandler}
+              >
+                <FaMoneyBillWaveAlt className={classes.moneyIcon} />
+                <p className={classes.moneyExplainLong}>¥2001~￥3000</p>
+              </li>
+              <li
+                className={`${
+                  clickTwoBill ? classes.moneyBoxClicked : classes.moneyBox
+                }`}
+                onClick={clickTwoBillHandler}
+              >
+                <BsCashCoin className={classes.moneyIcon} />
+                <p className={classes.moneyExplainLong}>¥3001~￥4000</p>
+              </li>
+              <li
+                className={`${
+                  clickManyBill ? classes.moneyBoxClicked : classes.moneyBox
+                }`}
+                onClick={clickManyBillHandler}
+              >
+                <GiMoneyStack className={classes.moneyIcon} />
+                <p className={classes.moneyExplain}>¥4001~</p>
+              </li>
+            </ul>
+      </div>
       {clickDetail && (
         <FadeUp>
           <div className={classes.genreSearch}>
@@ -224,7 +339,9 @@ const Category = (props) => {
           <FaMinus className={classes.icon} size="15px" />
         )}
       </button>
-      <button className={classes.sortBtn}><BiSortDown className={classes.sortIcon} size="25px"/></button>
+      <button className={classes.sortBtn}>
+        <BiSortDown className={classes.sortIcon} size="25px" />
+      </button>
     </>
   );
 };

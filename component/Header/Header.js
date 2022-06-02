@@ -24,9 +24,12 @@ const Header = (props) => {
       <header className={classes.header}>
         {/* <Link href="/"> */}
           <div className={classes.logo}>
+            <Link href="/">
             <img src="/images/logoCopy-min.png" alt="" className={classes.headerImage} />
+            </Link>
             <h1 className={classes.mainTitle}>
-              <span className={classes.spanColor}>W</span>asemeshi
+              <span className={classes.spanColor}>W</span>
+              <Link href="/">asemeshi</Link>
             </h1>
           </div>
         {/* </Link> */}

@@ -9,7 +9,7 @@
   color: white;
   text-shadow: 1px 3px 6px black;
 }
-.titleSection{
+.titleSection {
   display: flex;
 }
 .restaurantLogo {
@@ -25,19 +25,14 @@
   height: 500px;
   margin-top: 30px;
 }
-/* ::selection {
-  color: #fff;
-  background-color: #871b28;
-} */
-
 .shopName {
   margin-left: 20px;
   margin-bottom: -10px;
 }
-.shopNameLong{
- margin-left: 20px;
- margin-bottom: -10px;
- font-size: 18px;
+.shopNameLong {
+  margin-left: 20px;
+  margin-bottom: -10px;
+  font-size: 18px;
 }
 .info {
   margin-left: 20px;
@@ -147,6 +142,136 @@
 .priceArea {
   display: flex;
 }
+.finishIcon {
+  display: none;
+}
+.pushIcon {
+  display: none;
+}
+.balloon6 .faceicon img {
+  display: none;
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+.shopIcon {
+  display: none;
+}
+.moneyIcon {
+  display: none;
+}
+.balloon1 .faceicon img {
+  display: none;
+}
+
+.shopName {
+  font-family: "Shippori Mincho B1";
+  margin-left: 20%;
+  margin-top: 50px;
+}
+.mainBorder {
+  width: 700px;
+  margin-left: 260px;
+}
+
+.address {
+  font-size: 15px;
+  margin-left: 20%;
+}
+.catch {
+  color: #871b28;
+  font-family: "Shippori Mincho B1";
+}
+.map {
+  width: 800px;
+  height: 450px;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+.mapSectionTitle span {
+  color: #871b28;
+  font-size: 1.2em;
+}
+.mapSectionTitle {
+  text-shadow: 1px 2px 3px #808080;
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin-left: 50px;
+  margin-left: 18%;
+}
+.callIcon {
+  display: none;
+}
+.shopImg {
+  width: 400px;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+.informationBox {
+  margin-left: 5px;
+  margin-top: 5px;
+  list-style: none;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(168, 147, 123, 0.164);
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.538);
+  border-radius: 20px;
+}
+.informationNoSomething {
+  background-color: rgba(174 174 167);
+  margin-left: 5px;
+  margin-top: 5px;
+  list-style: none;
+  width: 150px;
+  height: 150px;
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.538);
+  border-radius: 20px;
+}
+.privateRoomText {
+  font-size: 20px;
+  margin-top: -5px;
+  margin-left: 28px;
+  font-weight: 900;
+}
+.informationData {
+  position: relative;
+  top: 10px;
+  left: 45px;
+  font-family: "Scheherazade New", serif;
+  font-weight: 900;
+}
+.creditCardText {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-left: 35px;
+  font-weight: 900;
+}
+.privateRoomIcon {
+  width: 90px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.wifiText {
+  font-size: 20px;
+  margin-left: 45px;
+  margin-top: 25px;
+  font-weight: 900;
+}
+.midnightText {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 32px;
+  font-weight: 900;
+}
+
+.informationIcon {
+  font-size: 65px;
+  position: relative;
+  left: 35px;
+  top: 20px;
+}
 
 @media screen and (max-width: 430px) {
   .restaurant-logo {
@@ -230,19 +355,13 @@
     height: 150px;
   }
   .mainBorder {
-    width: 300px;
-    margin-left: -10px;
+    width: 350px;
+    margin-left: 20px;
   }
-  .img1 {
-    position: relative;
-    top: -15px;
-    right: 15px;
+  .address {
+    margin-left: 20px;
   }
-  .img2 {
-    position: relative;
-    top: -40px;
-    left: 90px;
-  }
+
   .catch {
     color: #871b28;
     font-size: 18px;
@@ -263,17 +382,20 @@
     box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.538);
     border-radius: 20px;
   }
-  .privateRoomText{
+  .privateRoomText {
+    font-size: 15px;
     margin-top: -5px;
     margin-left: 28px;
     font-weight: 900;
   }
-  .creditCardText{
+  .creditCardText {
+    font-size: 15px;
     margin-top: 25px;
     margin-left: 35px;
     font-weight: 900;
   }
-  .privateRoomIcon{
+  .privateRoomIcon {
+    width: 70px;
     margin-left: 20px;
     margin-top: 10px;
   }
@@ -285,26 +407,29 @@
     font-weight: 900;
   }
   .informationIcon {
+    font-size: 50px;
     position: relative;
     left: 35px;
     top: 20px;
   }
-  .informationTitle{
+  .informationTitle {
     font-weight: 900;
     font-size: 25px;
     text-shadow: 1px 2px 3px #808080;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
   }
-  .informationSpan{
+  .informationSpan {
     color: #871b28;
     font-size: 1.3em;
   }
-  .wifiText{
+  .wifiText {
     margin-left: 45px;
     margin-top: 25px;
     font-weight: 900;
+    font-size: 15px;
   }
-  .midnightText{
+  .midnightText {
+    font-size: 15px;
     margin-top: 30px;
     margin-left: 32px;
     font-weight: 900;
@@ -319,322 +444,342 @@
     box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.538);
     border-radius: 20px;
   }
-  .moneyIcon{
+  .moneyIcon {
+    display: block;
     width: 75px;
     height: 75px;
     margin-left: 20px;
     margin-top: 10px;
     color: rgb(159, 159, 102);
   }
-  .myCommentBudget .budgetText{
-    font-family:'Times New Roman', Times, serif;
+  .myCommentBudget .budgetText {
+    font-family: "Times New Roman", Times, serif;
     font-weight: 900;
     font-size: 20px;
   }
-  .mapSectionTitle{
+  .mapSectionTitle {
     text-shadow: 1px 2px 3px #808080;
     display: flex;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-weight: 700;
     font-size: 25px;
     margin-left: 50px;
   }
-  .mapSpan{
+  .mapSpan {
     color: #871b28;
   }
- .homeLink{
-   font-family: 'Times New Roman', Times, serif;
-   font-weight: 800;
- }
- .lineBc { 
-  background: url("/images/waseda.png");
-  max-width: 450px;
-  height: 780px;
-  background-size: cover;
-  /* filter: grayscale(0.8); */
-  /* margin: 15px auto; */
-}
-
-/*以下、②左側のコメント*/
-
-.balloon1 {
-  width: 100%;
-  margin-top: 40px;
-  overflow: hidden;
-}
-
-.balloon1 .faceicon {
-  float: left;
-  margin-right: -50px;
-  width: 50px;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.balloon1 .faceicon img{
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-.balloon1 .chatting {
-  width: 100%;
-  text-align: left;
-}
-.balloon6 {
-  width: 100%;
-  margin: 10px 0;
-  overflow: hidden;
-}
-
-.balloon6 .faceicon {
-  float: left;
-  margin-right: -50px;
-  width: 50px;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.balloon6 .faceicon img{
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-.balloon6 .chatting {
-  width: 100%;
-  text-align: left;
-}
-.says {
-  display: inline-block;
-  position: relative; 
-  margin: 10px 0 0 60px;
-  padding: 10px;
-  max-width: 250px;
-  border-radius: 12px;
-  background: #edf1ee;
-}
-
-.says:after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 3px; 
-  left: -19px;
-  border: 8px solid transparent;
-  border-right: 18px solid #edf1ee;
-  -webkit-transform: rotate(35deg);
-  transform: rotate(35deg);
-}
-.says p {
-  margin: 0;
-  padding: 0;
-  color: #5f111a;
-  font-weight: 800;
-  font-size:18px;
-}
-
-.myCommentBudget{
-  margin-left:42%;
-  margin-top: -30px;
-}
-.myCommentBudget p{
-  display: inline-block;
-  position: relative; 
-  margin: 0 10px 0 0;
-  padding: 8px;
-  max-width: 250px;
-  border-radius: 12px;
-  background-color: rgba(241, 233, 223, 0.884);
-  font-size: 12px;
-}
-.myCommentBudget p:after {
-  content: "";
-  position: absolute;
-  top: 5px; 
-  right: -18px;
-  border: 8px solid transparent;
-  border-left: 18px solid  rgba(241, 233, 223, 0.884);
-  -webkit-transform: rotate(-35deg);
-  transform: rotate(-35deg);
-}
-/*以下、③右側の緑コメント*/
-.mycomment {
-  margin-top: -25px;
-  margin-left:35%;
-}
-.mycomment p {
-  display: inline-block;
-  position: relative; 
-  margin: 0 10px 0 0;
-  padding: 8px;
-  max-width: 250px;
-  border-radius: 12px;
-  background-color: rgba(241, 233, 223, 0.884);
-  font-size: 12px;
-}
-
-.mycomment p:after {
-  content: "";
-  position: absolute;
-  top: 3px; 
-  right: -20px;
-  border: 8px solid transparent;
-  border-left: 18px solid  rgba(241, 233, 223, 0.884);
-  -webkit-transform: rotate(-35deg);
-  transform: rotate(-35deg);
-}
-.shopIcon{
-  margin-left:80%;
-}
-.calenderIcon{
-  width: 50px;
-  height: 50px;
-  margin: 10px 20px;
-}
-.mycomment .calenderText{
- text-align: center;
- font-size: 15px;
- font-weight: bold;
-}
-.informationChatBar{
-  display: flex;
-  width: 100%;
-  max-width: 480px;
-  height: 50px;
-  background-color: rgba(12, 15, 39, 0.719);
-  margin-bottom: -20px;
-}
-.shopBarName{
-  color: #ffffff;
-  font-weight: 300;
-  font-family:'Courier New', Courier, monospace;
-  text-align: center;
-  text-align:justify;
-  overflow-wrap:break-word ;
-  /* position: relative; */
-  font-size: 15px;
-  margin-top: 18px;
-  /* top: 15px; */
-}
-.barArrow{
-  color: #ffffff;
-  opacity: 0.8;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-.callIcon{
-  color: whitesmoke;
-  opacity: 0.8;
-  margin-left: 0px;
-  margin-top: 10px;
-}
-.open{
-  margin-left: 12%;
-}
-.close{
-  margin-left: 10%;
-}
-.shopImg{
-  width: 250px;
-  height: 250px;
-  animation: push ease-in-out 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  box-shadow: 5px -4px 5px #00000066;
-}
-.pushIcon{
-  width: 100px;
-  height: 100px;
-  margin-top: 170px;
-  margin-right: -20px;
-  animation: pushHuman ease-in-out 5s ;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.shopImgBx{
-  display: flex;
-  position: relative;
-  left: -70px;
-}
-
-@keyframes push {
-0%{
-  transform: translateX(0px);
-}
-50%{
-  transform: translateX(30px);
-}
-100%{
-  transform: translateX(50px);
-}
-}
-@keyframes pushHuman {
-  0%{
-    transform: translateX(0px);
+  .homeLink {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 800;
   }
-  50%{
-    transform: translateX(30px);
+  .lineBc {
+    background: url("/images/waseda.png");
+    max-width: 450px;
+    height: 780px;
+    background-size: cover;
+    /* filter: grayscale(0.8); */
+    /* margin: 15px auto; */
   }
-  90%{
-    opacity: 1;
+
+  /*以下、②左側のコメント*/
+
+  .balloon1 {
+    width: 100%;
+    margin-top: 40px;
+    overflow: hidden;
   }
-  100%{
-    transform: translateX(50px);
-    opacity: 0;
+
+  .balloon1 .faceicon {
+    float: left;
+    margin-right: -50px;
+    width: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
   }
+
+  .balloon1 .faceicon img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
   }
-@keyframes finish {
-  0%,90%{
-    opacity: 0;
+  .balloon1 .chatting {
+    width: 100%;
+    text-align: left;
   }
-  100%{
-    opacity: 1;
+  .balloon6 {
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
   }
-}
-.finishIcon{
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 65%;
-  right: 76%;
-  animation: finish ease-in-out 5.5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count:1;
-}
-.shopName{
-  font-weight: 600;
-  font-size: 20px;
-  font-family: 'Shippori Mincho B1';
-  margin-bottom: 10px;
-  width: 350px;
-  text-align:justify;
-  overflow-wrap:break-word ;
-}
-.cheerIcon{
-  margin-left: 73%;
-  margin-top: -18%;
-}
-.shortClose{
-  margin-left: 44%;
-}
-.informationSectionTitle{
-  position: absolute;
-  font-weight: 900;
-  margin-left: 30px;
-  font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
-  text-shadow: 1px 2px 3px #808080;
-}
-.informationSectionTitle span {
-  color: #871b28;
-  font-size: 1.3em;
-  text-shadow: 1px 2px 3px #808080;
-}
-.phoneIcon{
-  position: relative;
-  top: 15px;
-  left: -20px;
-}
-.comment{
-  width: 220px;
-}
+
+  .balloon6 .faceicon {
+    float: left;
+    display: block;
+    margin-right: -50px;
+    width: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  .balloon6 .faceicon img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  .balloon6 .chatting {
+    width: 100%;
+    text-align: left;
+  }
+  .says {
+    display: inline-block;
+    position: relative;
+    margin: 10px 0 0 60px;
+    padding: 10px;
+    max-width: 250px;
+    border-radius: 12px;
+    background: #edf1ee;
+  }
+
+  .says:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: -19px;
+    border: 8px solid transparent;
+    border-right: 18px solid #edf1ee;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+  }
+
+  .says p {
+    margin: 0;
+    padding: 0;
+    color: #5f111a;
+    font-weight: 800;
+    font-size: 18px;
+  }
+
+  .myCommentBudget {
+    margin-left: 42%;
+    margin-top: -30px;
+  }
+  .myCommentBudget p {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0;
+    padding: 8px;
+    max-width: 250px;
+    border-radius: 12px;
+    background-color: rgba(241, 233, 223, 0.884);
+    font-size: 12px;
+  }
+  .myCommentBudget p:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -18px;
+    border: 8px solid transparent;
+    border-left: 18px solid rgba(241, 233, 223, 0.884);
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+  }
+  /*以下、③右側の緑コメント*/
+  .mycomment {
+    margin-top: -25px;
+    margin-left: 35%;
+  }
+  .mycomment p {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0;
+    padding: 8px;
+    max-width: 250px;
+    border-radius: 12px;
+    background-color: rgba(241, 233, 223, 0.884);
+    font-size: 12px;
+  }
+
+  .mycomment p:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -20px;
+    border: 8px solid transparent;
+    border-left: 18px solid rgba(241, 233, 223, 0.884);
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+  }
+  .shopIcon {
+    display: block;
+    margin-left: 80%;
+  }
+  .calenderIcon {
+    width: 50px;
+    height: 50px;
+    margin: 10px 20px;
+  }
+  .mycomment .calenderText {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .informationChatBar {
+    display: flex;
+    width: 100%;
+    max-width: 480px;
+    height: 50px;
+    background-color: rgba(12, 15, 39, 0.719);
+    margin-bottom: -20px;
+  }
+  .shopBarName {
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    text-align: justify;
+    overflow-wrap: break-word;
+    /* position: relative; */
+    font-size: 15px;
+    margin-top: 18px;
+    /* top: 15px; */
+  }
+  .barArrow {
+    color: #ffffff;
+    opacity: 0.8;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .callIcon {
+    color: whitesmoke;
+    opacity: 0.8;
+    margin-left: 0px;
+    margin-top: 10px;
+    display: block;
+  }
+  .open {
+    margin-left: 12%;
+  }
+  .close {
+    margin-left: 10%;
+  }
+  .shopImg {
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 250px;
+    height: 250px;
+    animation: push ease-in-out 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: 5px -4px 5px #00000066;
+  }
+  .pushIcon {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 170px;
+    margin-right: -20px;
+    animation: pushHuman ease-in-out 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .shopImgBx {
+    display: flex;
+    position: relative;
+    left: -70px;
+  }
+
+  @keyframes push {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(30px);
+    }
+    100% {
+      transform: translateX(50px);
+    }
+  }
+  @keyframes pushHuman {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(30px);
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+  }
+  @keyframes finish {
+    0%,
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .finishIcon {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 65%;
+    right: 76%;
+    animation: finish ease-in-out 5.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  .shopName {
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: "Shippori Mincho B1";
+    margin-bottom: 10px;
+    width: 350px;
+    text-align: justify;
+    overflow-wrap: break-word;
+  }
+  .cheerIcon {
+    margin-left: 73%;
+    margin-top: -18%;
+  }
+  .shortClose {
+    margin-left: 44%;
+  }
+  .informationSectionTitle {
+    position: absolute;
+    font-weight: 900;
+    margin-left: 30px;
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 1px 2px 3px #808080;
+  }
+  .informationSectionTitle span {
+    color: #871b28;
+    font-size: 1.3em;
+    text-shadow: 1px 2px 3px #808080;
+  }
+  .phoneIcon {
+    position: relative;
+    top: 15px;
+    left: -20px;
+  }
+  .comment {
+    width: 220px;
+  }
+  .map {
+    width: 100%;
+    height: 400px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
 }

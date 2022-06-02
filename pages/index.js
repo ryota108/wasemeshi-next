@@ -208,13 +208,13 @@ export default function Home({ data }) {
             </form>
         <Category onSubmit={submitCategoryHandler}/>
         <div className='flex'><span className="resultReturn">{page.results_available}</span> <h3>件</h3></div>
-              <button onClick={resetHandler}>Reset</button>
+              {/* <button onClick={resetHandler}>Reset</button> */}
         <ul className="flex" style={{flexWrap:"wrap"}}>
           {shop.map((item, index) => {
             return (
               <FadeUp key={index}>
               <li className="shop" key={index}>
-       <Link href={`restaurants/${item.id}`} >
+       <Link key={index} href={`restaurants/${item.id}`} >
          <div className="shop-card">
            <div className="img-box">
              <img className="shop-img" src={item.photo.pc.l} />
@@ -223,7 +223,7 @@ export default function Home({ data }) {
            <p>{item.catch}</p>
            <hr align="left" color="#871b28" width="300px" />
            <div className="price-area">
-           <AiFillMoneyCollect size="25px" className='moneyMiniIcon'/> <h4 className="moneyInfo">{item.budget.name}</h4>
+           <AiFillMoneyCollect key={index} size="25px" className='moneyMiniIcon'/> <h4 className="moneyInfo">{item.budget.name}</h4>
              {/* <h4>{item.open}</h4> */}
            </div>
         </div>

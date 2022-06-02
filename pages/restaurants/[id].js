@@ -59,6 +59,7 @@ const Detail = ({ data }) => {
    }
    return moneyIcon;
   }
+  // capacityが小規模 2,3人　~15 グループにおすすめ　40～　打ち上げにおすすめ　80~
   // console.log(data.results.shop[0].credit_card)
   // data.results.shop[0].credit_card.map((card)=>{console.log(card.name)})
   return (
@@ -181,14 +182,14 @@ const Detail = ({ data }) => {
         <div style={{ display: "flex", flexWrap: "wrap" }}>
 
           <li className={`${card  ? classes.informationBox:classes.informationNoSomething}`}>
-            <AiFillCreditCard className={classes.informationIcon} size="50px" />
+            <AiFillCreditCard className={classes.informationIcon}  />
             <p className={classes.creditCardText}>{data.results.shop[0].card}</p>
           </li>
           <li className={`${wifi ? classes.informationBox:classes.informationNoSomething}`}>
             {wifi ? (
-              <AiOutlineWifi className={classes.informationIcon} size="50px" />
+              <AiOutlineWifi className={classes.informationIcon}  />
             ) : (
-              <FiWifiOff className={classes.informationIcon} size="50px" />
+              <FiWifiOff className={classes.informationIcon}  />
             )}
             <p className={classes.wifiText}>
               {data.results.shop[0].wifi}
@@ -203,7 +204,7 @@ const Detail = ({ data }) => {
             </p>
           </li>
           <li  className={`${midnight ? classes.informationBox:classes.informationNoSomething}`}>
-            <MdNightsStay className={classes.informationIcon} size="50px" />
+            <MdNightsStay className={classes.informationIcon}  />
             <p className={classes.midnightText}> {midnight
                 ? "営業中"
                 : "営業外"}</p>
@@ -212,14 +213,17 @@ const Detail = ({ data }) => {
           </FadeUp>
       </ul>
       <div className={classes.mapSectionTitle}>
+        {/* <p>{data.results.shop[0].capacity}</p> */}
       <h1><span className={classes.mapSpan}>M</span>ap</h1><img src="/images/mapHuman-min.png" width="125px"/>
       </div>
+
       <iframe
         src={`https://maps.google.com/maps?output=embed&q=${data.results.shop[0].name}&${data.results.shop[0].address}ll=${data.results.shop[0].lat},${data.results.shop[0].allowfullScreenlng}&t=m&hl=ja&z=18`}
         width="100%"
         height="400"
         frameBorder="0"
         allowFullScreen=""
+        className={classes.map}
       ></iframe>
       <AiFillHome/><Link href="/"className={classes.homeLink}>＜Homeに戻る</Link>
       {console.log(data)}

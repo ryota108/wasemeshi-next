@@ -233,18 +233,6 @@ export default function Home({ data }) {
             )
           })}
         </ul>
-        {/* {page.results_returned <= page.results_start ? (
-          <div></div>
-        ) : ( */}
-          {/* <div className="">
-            <p>上手く読み込まない場合はボタンを押してください</p>
-            <button
-              className="readMoreBtn"
-              onClick={handlerOnClickReadMore}
-            >
-              もっと読む
-            </button>
-          </div> */}
           <div ref={ref}></div>
         {/* )} */}
         {!inView && <img src="/images/loading.gif" className='loadingSpinner' />  }

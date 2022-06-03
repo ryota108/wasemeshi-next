@@ -181,6 +181,8 @@
 .catch {
   color: #871b28;
   font-family: "Shippori Mincho B1";
+  font-size: 22px;
+  margin-left: 78px;
 }
 .map {
   width: 800px;
@@ -206,7 +208,7 @@
 }
 .shopImg {
   width: 400px;
-  margin-left: 50px;
+  margin-left: 85px;
   margin-top: 40px;
 }
 .informationBox {
@@ -260,9 +262,9 @@
   font-weight: 900;
 }
 .midnightText {
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 30px;
-  margin-left: 32px;
+  margin-left: 15px;
   font-weight: 900;
 }
 
@@ -272,7 +274,113 @@
   left: 35px;
   top: 20px;
 }
+.br{
+  display: none;
+}
+.lineBc{
+  display: none;
+}
+.infoTitle{
+  display: none;
+}
 
+.informationTitle {
+  font-weight: 900;
+  font-size: 35px;
+  text-shadow: 1px 2px 3px #808080;
+  font-family: "Times New Roman", Times, serif;
+}
+.informationSpan {
+  color: #871b28;
+  font-size: 1.3em;
+}
+.infoForLaptop{
+  position: absolute;
+  top: 520px;
+  left: 550px;
+  list-style: none;
+}
+.infoBorder{
+  width: 600px;
+}
+.informationListTitle h2 {
+  font-size: 15px;
+  font-family: "Scheherazade New", serif;
+  text-shadow: 2px 1px 4px #00000073;
+}
+.closeDayText{
+  width: 600px;
+}
+.openingHourText{
+  width: 600px;
+}
+/* .informationListTitle p {
+ width: 600px;
+} */
+.chairIcon{
+  margin-top: 15px;
+}
+.chairArea{
+  display: flex;
+}
+.chairText{
+  margin-top: 6px;
+  margin-left: 30px;
+  font-size: 1.3rem;
+  color: #871b28;
+  text-shadow: 1px 1px 2px #00000085;
+}
+.chairCharacter{
+  margin-top: 12px;
+  margin-left: 5px;
+}
+.budgetForLapIcon{
+  margin-top: 18px;
+  margin-left: 5px;
+}
+.budgetForLapText{
+  margin-left: 20px;
+  margin-top: 10px;
+  color: #871b28;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px #00000085;
+  margin-bottom: 0px;
+}
+.cheerIcon{
+  display: none;
+}
+.infoTitleForLap{
+  font-family:"Times New Roman", Times, serif ;
+  text-shadow: 1px 1px 2px #00000085;
+  margin-bottom: 0px;
+}
+.infoTitleForLap span{
+  color: #871b28;
+  font-size: 1.3em;
+  font-family:"Times New Roman", Times, serif ;
+}
+.otherMemo{
+  margin-left: 40px;
+}
+.maxMember{
+  margin-left: 40px;
+  margin-top: -5px;
+  font-weight: 900;
+  font-size: 18px;
+}
+.partyIcon{
+  margin-left: 20px;
+}
+.reservedIcon{
+  margin-left: 25px;
+  margin-top: 5px;
+}
+.reservedText{
+  margin-top: -10px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+}
 @media screen and (max-width: 430px) {
   .restaurant-logo {
     width: 0px;
@@ -336,6 +444,9 @@
   .titleContent {
     height: 100px;
   }
+  .infoTitle{
+    display: flex;
+  }
   .description {
     width: 100vw;
     margin-left: 20px;
@@ -371,6 +482,9 @@
   }
   .informationList {
     list-style: none;
+  }
+  .laptopBorder{
+    display: none;
   }
   .informationBox {
     margin-left: 5px;
@@ -429,9 +543,9 @@
     font-size: 15px;
   }
   .midnightText {
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 30px;
-    margin-left: 32px;
+    margin-left: 10px;
     font-weight: 900;
   }
   .informationNoSomething {
@@ -477,6 +591,7 @@
     max-width: 450px;
     height: 780px;
     background-size: cover;
+    display: block;
     /* filter: grayscale(0.8); */
     /* margin: 15px auto; */
   }
@@ -749,6 +864,7 @@
     overflow-wrap: break-word;
   }
   .cheerIcon {
+    display: block;
     margin-left: 73%;
     margin-top: -18%;
   }
@@ -781,5 +897,26 @@
     height: 400px;
     margin-left: 0px;
     margin-bottom: 0px;
+  }
+  .infoForLaptop{
+    display: none;
+  }
+  .otherMemo{
+    margin-left: 0px;
+  }
+  .partyIcon{
+    width: 75px;
+    margin-top: 10px;
+  }
+  .maxMember{
+    font-size: 15px;
+    margin-left: 30px;
+  }
+  .reservedIcon{
+    width: 80px;
+  }
+  .reservedText{
+    margin-top: -10px;
+    font-size: 15px;
   }
 }

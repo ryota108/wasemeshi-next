@@ -145,9 +145,9 @@ const Category = (props) => {
             <div className={classes.categoryBtn}>
               <img
                 className={classes.categoryImg}
-                src="/images/ramenCategory.jpg"
+                src="/images/question.jpg"
               />
-              <h2 className={classes.categoryText}>麵料理</h2>
+              <h2 className={classes.categoryText}>悩み中</h2>
             </div>
           </li>
         </ul>

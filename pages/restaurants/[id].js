@@ -13,6 +13,7 @@ import {AiFillHome} from "react-icons/ai";
 import {MdArrowBackIosNew} from "react-icons/md";
 import {BsFillCalendarCheckFill} from "react-icons/bs";
 import {IoCallOutline} from "react-icons/io5";
+import {BiChair} from "react-icons/bi";
 import FadeUp from "../../component/UI/FadeUp";
 import ShowUp from "../../component/UI/ShowUp";
 
@@ -34,33 +35,41 @@ const Detail = ({ data }) => {
   const wifi = searchString(data.results.shop[0].wifi, "あり");
   const privateRoom = searchString(data.results.shop[0].private_room, "あり") ;
   const midnight = searchString(data.results.shop[0].midnight, "営業している");
+  const reserved = searchString(data.results.shop[0].charter, "貸切可");
   const length = data.results.shop[0].name.length
   const closeLength = data.results.shop[0].close.length < 5;
   const openLength = data.results.shop[0].close.length === 2;
   const toggleOpenIcon = openLength ?  <BsFillCalendarCheckFill className={classes.calenderIcon} />: null;
   const moneyCategory = (price)=>{
     let moneyIcon;
-   switch (price){
-     case "～1000円":
+    switch (price){
+      case "～1000円":
        moneyIcon = <RiCoinFill className={classes.moneyIcon}/>;
        break;
      case "1001～2000円":
-     case "1501～2000円":
-       moneyIcon = <GiTwoCoins className={classes.moneyIcon}/>;
-       break;
+       case "1501～2000円":
+         moneyIcon = <GiTwoCoins className={classes.moneyIcon}/>;
+         break;
      case "2001～3000円":
        moneyIcon = <FaMoneyBillWaveAlt className={classes.moneyIcon}/>;
        break;
-     case "3001～4000円":
-       moneyIcon = <BsCashCoin className={classes.moneyIcon}/>;
-       break;
-      default: 
-      moneyIcon = <GiMoneyStack className={classes.moneyIcon}/>;
-   }
-   return moneyIcon;
-  }
-  // capacityが小規模 2,3人　~15 グループにおすすめ　40～　打ち上げにおすすめ　80~
-  // console.log(data.results.shop[0].credit_card)
+       case "3001～4000円":
+         moneyIcon = <BsCashCoin className={classes.moneyIcon}/>;
+         break;
+         default: 
+         moneyIcon = <GiMoneyStack className={classes.moneyIcon}/>;
+        }
+        return moneyIcon;
+      }
+      const maxMember = (member) =>{
+        if(member===""){
+          return "未確認"
+        }else{
+          return `最大${member}人`
+        }
+      }
+      // capacityが小規模 2,3人　~15 グループにおすすめ　40～　打ち上げにおすすめ　80~
+      // console.log(data.results.shop[0].credit_card)
   // data.results.shop[0].credit_card.map((card)=>{console.log(card.name)})
   return (
     <>
@@ -91,12 +100,12 @@ const Detail = ({ data }) => {
       </div>
       <h2 className={classes.catch}>{data.results.shop[0].genre.catch}</h2>
       <img src="/images/cheer.png" className={classes.cheerIcon} width="100px"/>
-      <div className="flex">
+      <div className={classes.infoTitle}>
         <img src="/images/comment.png" className={classes.comment}/>
       <h1 className={`${classes.informationSectionTitle}`}><span>I</span>nformation</h1>
       <img src="/images/phone.png" width="100px" className={classes.phoneIcon}/>
       </div>
-      <div className={classes.lineBc}>
+  <div className={classes.lineBc}>
       <div className={classes.informationChatBar}>
        <MdArrowBackIosNew size="30px" className={classes.barArrow}/> <h3 className={classes.shopBarName}>{data.results.shop[0].name}</h3>
         <IoCallOutline className={classes.callIcon} size="30px"/>
@@ -108,7 +117,13 @@ const Detail = ({ data }) => {
     <ShowUp delay="1000">
     <div className={classes.chatting}>
       <div className={classes.says}>
-        <p>予算</p>
+        <p className={classes.budgetInfo}>予算</p>
+          <hr
+            className={classes.laptopBorder}
+            color="#871b28"
+            width="80%"
+            align="left"
+          />
       </div>
     </div>
     </ShowUp>
@@ -120,7 +135,7 @@ const Detail = ({ data }) => {
   <div className={classes.myCommentBudget}>
   <p className={classes.budgetText}>
     {moneyCategory(data.results.shop[0].budget.name)}
-    <br/>
+    <br className={classes.br}/>
     {data.results.shop[0].budget.name}
     </p>
   </div>
@@ -172,11 +187,56 @@ const Detail = ({ data }) => {
     </p>
   </div>
   </ShowUp>
-  
-</div>
-      <ul className={classes}>
-        <li className={classes.informationList}>
-        </li>
+  </div>
+  <ul className={classes.infoForLaptop}>
+    <h1 className={classes.infoTitleForLap}><span>I</span>nformation</h1>
+    <li className={classes.informationListTitle}>
+      <div className={classes.priceArea}>
+      <h2>予算</h2><BsCashCoin size="20px" className={classes.budgetForLapIcon}/> <p className={classes.budgetForLapText}>{data.results.shop[0].budget.name}</p>
+      </div>
+    </li>
+    <hr
+            className={classes.infoBorder}
+            color="#871b28"
+            width="100%"
+            align="left"
+          />
+    <li className={classes.informationListTitle}><h2>定休日</h2><p className={classes.closeDayText}>{data.results.shop[0].close}</p></li>
+    <hr
+            className={classes.infoBorder}
+            color="#871b28"
+            width="100%"
+            align="left"
+          />
+    <li className={classes.informationListTitle}><h2>営業時間</h2><p className={classes.openingHourText}>{data.results.shop[0].open}</p></li>
+    <hr
+            className={classes.infoBorder}
+            color="#871b28"
+            width="100%"
+            align="left"
+          />
+    <li className={classes.informationListTitle}>
+      <div className={classes.chairArea}>
+      <h2>席数</h2><BiChair size="20px" className={classes.chairIcon}/><p className={classes.chairText}>{data.results.shop[0].capacity}</p><p className={classes.chairCharacter}>席</p>
+      </div>
+      
+      </li>
+    <hr
+            className={classes.infoBorder}
+            color="#871b28"
+            width="100%"
+            align="left"
+          />
+    <li className={classes.informationListTitle}><h2>備考</h2><p>{data.results.shop[0].other_memo}</p></li>
+    <hr
+            className={classes.infoBorder}
+            color="#871b28"
+            width="100%"
+            align="left"
+          />
+  </ul>
+
+      <ul className={classes.otherMemo}>
         <h2 className={classes.informationTitle}><span className={classes.informationSpan}>O</span>ther Memo</h2>
           <FadeUp>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
@@ -205,15 +265,24 @@ const Detail = ({ data }) => {
           </li>
           <li  className={`${midnight ? classes.informationBox:classes.informationNoSomething}`}>
             <MdNightsStay className={classes.informationIcon}  />
-            <p className={classes.midnightText}> {midnight
+            <p className={classes.midnightText}>23時以降 {midnight
                 ? "営業中"
                 : "営業外"}</p>
+          </li>
+          <li  className={classes.informationBox}>
+            <img className={classes.partyIcon} src="/images/party.png" width="100px"/>
+                <p className={classes.maxMember}>{maxMember(data.results.shop[0].party_capacity)}</p>
+          </li>
+          <li  className={`${reserved ? classes.informationBox:classes.informationNoSomething}`}>
+            <img className={classes.reservedIcon}src="/images/reserved.png" width="100px"/>
+            <p className={classes.reservedText}>{reserved
+                ? "貸切可"
+                : "貸切不可"}</p>
           </li>
         </div>
           </FadeUp>
       </ul>
       <div className={classes.mapSectionTitle}>
-        {/* <p>{data.results.shop[0].capacity}</p> */}
       <h1><span className={classes.mapSpan}>M</span>ap</h1><img src="/images/mapHuman-min.png" width="125px"/>
       </div>
 

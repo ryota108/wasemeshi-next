@@ -163,6 +163,25 @@ a {
   font-family: "Shippori Mincho B1";
   text-shadow: 1px 1px 2px #00000085;
 }
+.chairCharacter{
+  margin-top: -3px;
+  font-family:'Times New Roman', Times, serif;
+  color: #871b28;
+  font-weight: 800;
+  font-size: 1.3em;
+}
+.chairCharacter span{
+  color: black;
+  font-size: 15px;
+  margin-left: 3px;
+}
+
+.smokingText{
+  margin-top: -3px;
+  font-size: 15px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 900;
+}
 
 
 @media screen and (max-width:450px){
@@ -299,6 +318,10 @@ a {
   border-radius: 100px;
   width: 45px;
   margin-top: 10px;
+}
+.loadingSpinner{
+  margin-left: 45%;
+  width: 50px;
 }
 
 

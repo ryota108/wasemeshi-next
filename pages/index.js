@@ -6,6 +6,8 @@ import Explain from '../component/Explain/Explain'
 import Header from '../component/Header/Header'
 import {AiOutlineSearch} from "react-icons/ai";
 import{AiFillMoneyCollect} from "react-icons/ai";
+import {MdSmokingRooms} from "react-icons/md";
+import {BiChair} from "react-icons/bi";
 import { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
 
@@ -47,7 +49,7 @@ export default function Home({ data }) {
   const [keyword, setKeyword] = useState('')
  console.log(categoryValue);
   useEffect(() => {
-    if (keyword === '') return
+    // if (keyword === '') return
 
     const params = { keyword: keyword }
     const query = new URLSearchParams(params)
@@ -222,9 +224,17 @@ export default function Home({ data }) {
            <h3 className="shop-title">{item.name}</h3>
            <p>{item.catch}</p>
            <hr align="left" color="#871b28" width="300px" />
+           <div className="flex">
            <div className="price-area">
            <AiFillMoneyCollect key={index} size="25px" className='moneyMiniIcon'/> <h4 className="moneyInfo">{item.budget.name}</h4>
              {/* <h4>{item.open}</h4> */}
+           </div>
+           <div className='flex'>
+             <BiChair size="20px"/><p className='chairCharacter'>{item.capacity}<span>席</span></p>
+           </div>
+           <div className='flex'>
+             <MdSmokingRooms size="20px"/><p className="smokingText">{item.non_smoking}</p>
+           </div>
            </div>
         </div>
        </Link>

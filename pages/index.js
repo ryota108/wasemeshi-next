@@ -194,8 +194,9 @@ export default function Home({ data }) {
       </form>
       <Category onReset={resetHandler} onSubmit={submitCategoryHandler} />
       <div className="flex">
-        <span className="resultReturn">{page.results_available}</span>{" "}
-        <h3>件</h3>
+        <img src="/images/resultShow.png" className="resultShow"/>
+        <span className="resultReturn">{page.results_available}</span>
+        <h3 className="resultReturnText">件</h3>
       </div>
       {/* <button onClick={resetHandler}>Reset</button> */}
       <ul className="flex" style={{ flexWrap: "wrap" }}>

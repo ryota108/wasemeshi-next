@@ -20,13 +20,13 @@ export default async (req, res) => {
     url=`${url}&budget=B001,B011&count=70`
   }
   if(req.query.oneBill === "true"){
-    url=`${url}&budget=B002`
+    url=`${url}&budget=B002&count=100`
   }
   if(req.query.twoBill === "true"){
-    url=`${url}&budget=B003`
+    url=`${url}&budget=B003&count=55`
   }
   if(req.query.manyBill === "true"){
-    url=`${url}&budget=B008,B004,B005`
+    url=`${url}&budget=B008,B004,B005&count=20`
   }
   if(req.query.noodle === "true"){
     url=`${url}&keyword=ラーメン`

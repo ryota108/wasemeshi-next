@@ -62,11 +62,10 @@ const Header = (props) => {
           <ul className={`${clicked ? "fadeRight": ""}`}>
             <li onClick={mobileMenuHandler} className={classes.menuItems} >
               <Link href="/" className={classes.menuItems}>
-                {/* <AiFillHome /> */}
                 Home
               </Link>
             </li>
-            <div style={{display:"flex"}}>
+            <div className="flex">
             <li onClick={mobileMenuHandler} className={classes.menuItems}><a href="#search" className="menu-subItems"><AiOutlineSearch/>Search&gt;</a></li>
             <li style={{marginLeft:"20px"}}onClick={mobileMenuHandler}><a href="#map" className="menu-subItems"><FaMapMarkerAlt/>Map&gt;</a></li>
             </div>
@@ -89,8 +88,8 @@ const Header = (props) => {
             </li>
             <hr color="#871b28" className="menu-border"/>
             <li className={classes.menuItems}>
-              <a href="https://twitter.com/Wasemeshi1" target="_blank" rel="noopener noreferrer"> <FaTwitterSquare size="50px" /></a>
-              <a href="https://www.instagram.com/wasemeshi.r/" target="_blank" rel="noopener noreferrer"> <FaInstagramSquare size="50px" /></a>
+              <a href="https://twitter.com/Wasemeshi1" target="_blank" rel="noopener noreferrer"> <FaTwitterSquare className={classes.twitterIcon} /></a>
+              <a href="https://www.instagram.com/wasemeshi.r/" target="_blank" rel="noopener noreferrer"> <FaInstagramSquare className={classes.instagramIcon} /></a>
             </li>
           </ul>
           <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/LZ2dXaiaTBNkBKXWA">

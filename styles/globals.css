@@ -185,6 +185,22 @@ a {
 
 
 @media screen and (max-width:450px){
+  .resultShow{
+    width: 75px;
+    height: 75px;
+    margin-left: 20%;
+  }
+  .resultReturn{
+    margin-left: -10px;
+    margin-top: 2px;
+    font-size: 40px;
+    font-family: "fangsong";
+    text-shadow: 2px 2px 3px #0e0e0e80;
+  }
+  .resultReturnText{
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 1px #0e0e0e80;
+  }
   .menu-opened{
     position: fixed;
     top: 70px;

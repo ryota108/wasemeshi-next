@@ -84,7 +84,7 @@ const Header = (props) => {
             </li>
             <hr color="#871b28" className="menu-border"/>
             <li className={classes.menuItems}>
-              <span>C</span>ontact
+              Contact
             </li>
             <hr color="#871b28" className="menu-border"/>
             <li className={classes.menuItems}>

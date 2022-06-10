@@ -76,29 +76,28 @@ a {
   cursor: pointer;
 }
 
-.resultReturn{
+.resultReturn {
   color: #871b28;
   font-size: 20px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 700;
 }
 
-@media screen and (max-width:450px) {
- .shop {
-   margin-bottom: 20px;
- }
- .shop-img:active {
-  filter: brightness(60%);
-  cursor: pointer;
-  transform: scale(1.1, 1.1);
-  transition: all 1.5s;
-}
-.shop-card:active {
-  margin-top: -5px;
-  /* box-shadow: 13px 11px 11px 0px rgb(0 0 0 / 50%); */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
-  transition: all 0.5s;
-}
+@media screen and (max-width: 450px) {
+  .shop {
+    margin-bottom: 20px;
+  }
+  .shop-img:active {
+    filter: brightness(60%);
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    transition: all 1.5s;
+  }
+  .shop-card:active {
+    margin-top: -5px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s;
+  }
 }
 
 .title-name .main > span {
@@ -108,8 +107,8 @@ a {
 .title-name .sub {
   margin-top: 35px;
   padding-left: 10px;
-  font-family: 'Scheherazade New', serif;
-  font-family: 'Shippori Mincho B1', serif;
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
 }
 
 .title-name .sub > span {
@@ -118,16 +117,15 @@ a {
 }
 
 p {
-  font-family: 'Scheherazade New', serif;
-  font-family: 'Shippori Mincho B1', serif;
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
 }
 
 a {
-  font-family: 'Scheherazade New', serif;
-  font-family: 'Shippori Mincho B1', serif;
-  color:black;
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
+  color: black;
   text-decoration: none;
-  /* color: #871b28; */
 }
 
 .topic {
@@ -148,45 +146,45 @@ a {
   top: 1360px;
 }
 .mobile-menu-icon {
-  opacity:0;
-}
-.top-button{
   opacity: 0;
 }
-.moneyInfo{
+.top-button {
+  opacity: 0;
+}
+.moneyInfo {
   font-size: 15px;
   margin-top: 0px;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   color: #871b28;
 }
-.shop-title{
+.shop-title {
   font-family: "Shippori Mincho B1";
   text-shadow: 1px 1px 2px #00000085;
 }
-.chairCharacter{
+.chairCharacter {
   margin-top: -3px;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   color: #871b28;
   font-weight: 800;
   font-size: 1.3em;
 }
-.chairCharacter span{
+.chairCharacter span {
   color: black;
   font-size: 15px;
   margin-left: 3px;
 }
 
-.smokingText{
+.smokingText {
   margin-top: -3px;
   font-size: 15px;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 900;
 }
-.resultShow{
+.resultShow {
   width: 75px;
   height: 75px;
 }
-.resultReturn{
+.resultReturn {
   margin-left: -10px;
   margin-top: 2px;
   font-size: 40px;
@@ -194,110 +192,110 @@ a {
   text-shadow: 2px 2px 3px #0e0e0e80;
 }
 
-
-@media screen and (max-width:450px){
-  .resultShow{
+@media screen and (max-width: 450px) {
+  .resultShow {
     width: 75px;
     height: 75px;
     margin-left: 20%;
   }
-  .resultReturn{
+  .resultReturn {
     margin-left: -10px;
     margin-top: 2px;
     font-size: 40px;
     font-family: "fangsong";
     text-shadow: 2px 2px 3px #0e0e0e80;
   }
-  .resultReturnText{
-    font-family:'Times New Roman', Times, serif;
+  .resultReturnText {
+    font-family: "Times New Roman", Times, serif;
     text-shadow: 1px 1px 1px #0e0e0e80;
   }
-  .menu-opened{
+  .menu-opened {
     position: fixed;
     top: 70px;
     bottom: 0px;
     z-index: 100;
     width: 400px;
     height: 900px;
-    background-color:white;
+    background-color: white;
   }
-  .menu-border{
+  .menu-border {
     width: 300px;
     opacity: 0.8;
     border-width: 1px 0 0 0;
   }
-.global-content{
-  width: 100%;
-  display: block;
-  margin-left: -20%;
-  width: 100%;
-}
-.content{
-  width: 80%;
-  height: 45%;
-  margin-left: 65px;
-  margin-top: 83px;
-}
-.content > img{
-  margin-top: 50px;
-  right: 234px;
-  position: relative;
-}
-.title-name{
-  position: relative;
-  top: -35px;
-  left: -180px;
-}
-.title-name #sub {
-  width: 320px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 12px;}
+  .global-content {
+    width: 100%;
+    display: block;
+    margin-left: -20%;
+    width: 100%;
+  }
+  .content {
+    width: 80%;
+    height: 45%;
+    margin-left: 65px;
+    margin-top: 83px;
+  }
+  .content > img {
+    margin-top: 50px;
+    right: 234px;
+    position: relative;
+  }
+  .title-name {
+    position: relative;
+    top: -35px;
+    left: -180px;
+  }
+  .title-name #sub {
+    width: 320px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
 
-.title-name .main {
-  width: 310px !important;
-  font-size: 45px !important;
-}
-.fadeRight {
-  animation-name: fadeRightAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
+  .title-name .main {
+    width: 310px !important;
+    font-size: 45px !important;
+  }
+  .fadeRight {
+    animation-name: fadeRightAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
 
-@keyframes fadeRightAnime {
-  from {
+  @keyframes fadeRightAnime {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .initialClass {
     opacity: 0;
-    transform: translateX(100px);
   }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
+  .ad-image {
+    width: 360px;
   }
-}
-
-.initialClass {
-  opacity: 0;
-}
-.ad-image{
-  width: 360px;
-}
 }
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  .mobile-menu-icon{
+  .mobile-menu-icon {
     visibility: hidden;
   }
-  .header-image{
-    margin-left:0px;
+  .header-image {
+    margin-left: 0px;
   }
-  .main-title{
-    font-size:45px;
+  .main-title {
+    font-size: 45px;
   }
   .elements > li:nth-child(1) {
     padding-left: 0px;
   }
- }
- .fadeUp {
+}
+.fadeUp {
   animation-name: fadeUpAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -321,7 +319,7 @@ a {
   transition: all 0.5s;
 }
 
-.showUp{
+.showUp {
   opacity: 1;
   transition: all 0.5s;
 }
@@ -346,11 +344,10 @@ a {
   width: 45px;
   margin-top: 10px;
 }
-.loadingSpinner{
+.loadingSpinner {
   margin-left: 45%;
   width: 50px;
 }
-
 
 @media screen and (max-width: 480px) {
   .reset-button {
@@ -358,18 +355,18 @@ a {
     left: 0px;
     top: 0px;
   }
-  .loadingSpinner{
-    margin-left:42% ;
+  .loadingSpinner {
+    margin-left: 42%;
     width: 25px;
   }
-  .moneyInfo{
+  .moneyInfo {
     margin-top: -10px;
     font-size: 15px;
   }
-  .moneyMiniIcon{
+  .moneyMiniIcon {
     margin-top: -10px;
   }
-  .price-area{
+  .price-area {
     margin-top: 10px;
   }
   /* .readMoreBtn{

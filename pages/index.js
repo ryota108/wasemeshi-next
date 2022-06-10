@@ -175,8 +175,6 @@ export default function Home({ data }) {
   const submitCategoryHandler = (data) => {
     setCategoryValue(data);
   };
-  // console.log(categoryValue);
-  // console.log(reset);
   return (
     <>
       <Header />
@@ -194,11 +192,10 @@ export default function Home({ data }) {
       </form>
       <Category onReset={resetHandler} onSubmit={submitCategoryHandler} />
       <div className="flex">
-        <img src="/images/resultShow.png" className="resultShow"/>
+        <img src="/images/resultShow.png" className="resultShow" />
         <span className="resultReturn">{page.results_available}</span>
         <h3 className="resultReturnText">件</h3>
       </div>
-      {/* <button onClick={resetHandler}>Reset</button> */}
       <ul className="flex" style={{ flexWrap: "wrap" }}>
         {shop.map((item, index) => {
           return (
@@ -220,7 +217,6 @@ export default function Home({ data }) {
                           className="moneyMiniIcon"
                         />{" "}
                         <h4 className="moneyInfo">{item.budget.name}</h4>
-                        {/* <h4>{item.open}</h4> */}
                       </div>
                       <div className="flex">
                         <BiChair size="20px" />
@@ -242,7 +238,6 @@ export default function Home({ data }) {
         })}
       </ul>
       <div ref={ref}></div>
-      {/* )} */}
       {!inView && <img src="/images/loading.gif" className="loadingSpinner" />}
       <a href="http://webservice.recruit.co.jp/">
         <img

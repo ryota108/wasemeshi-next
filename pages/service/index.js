@@ -4,12 +4,7 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BiCategoryAlt } from "react-icons/bi";
-// import question from "../images/question-min.png";
 import { IoInformationCircleSharp } from "react-icons/io5";
-// import bread from "../images/bread-min.jpg";
-// import Subtitle from "../../src/Components/UI/SubTitle";
-// import waseda from "../images/waseda.jfif";
-// import gentleman from "../images/gentleman-min.png";
 import { useState } from "react";
 import Header from "../../component/Header/Header";
 const Service = () => {
@@ -29,7 +24,7 @@ const Service = () => {
   return (
     <>
       <>
-      <Header/>
+        <Header />
         <div
           className={classes.servicesSection}
           style={{ backgroundImage: `url("/images/waseda.jfif")` }}
@@ -96,13 +91,12 @@ const Service = () => {
           </div>
         </div>
       </>
-      {/* {isSearchOpen && <div className="service-modal">
-      <div className="close-modal" onClick={searchOpenHandler}><ImCancelCircle size="40px"/></div>
-     <Subtitle name="Search"/> <img src={searchHomes} width="100px"/>
-    </div>} */}
       <section
         className={classes.faqSection}
-        style={{backgroundImage:`url("/images/bread-min.jpg")`,marginTop:"-5px"}}
+        style={{
+          backgroundImage: `url("/images/bread-min.jpg")`,
+          marginTop: "-5px",
+        }}
       >
         <div style={{ display: "flex" }}>
           {/* <Subtitle name="FAQ"/> */}
@@ -142,7 +136,9 @@ const Service = () => {
         {/* <Subtitle name="About Me"/> */}
         <div className={classes.aboutMe}>
           <div className={classes.aboutMeContent}>
-            <div className={classes.aboutMeIcon}><img src="/images/gentleman-min.png" /></div>
+            <div className={classes.aboutMeIcon}>
+              <img src="/images/gentleman-min.png" />
+            </div>
             <h1 className={classes.aboutMeName}>
               <span>R</span>yota
             </h1>

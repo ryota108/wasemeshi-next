@@ -42,3 +42,9 @@ export default async (req, res) => {
   const result = await fetch(url);
   res.json(result.body);
 };
+export  function getStaticProps() {
+  fetch
+  return {
+    props: {}
+  }
+}

@@ -232,6 +232,8 @@
   border-radius: 20px;
 }
 .privateRoomText {
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   font-size: 20px;
   margin-top: -5px;
   margin-left: 28px;
@@ -245,6 +247,8 @@
   font-weight: 900;
 }
 .creditCardText {
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   font-size: 20px;
   margin-top: 25px;
   margin-left: 35px;
@@ -256,12 +260,16 @@
   margin-top: 10px;
 }
 .wifiText {
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   font-size: 20px;
   margin-left: 45px;
   margin-top: 25px;
   font-weight: 900;
 }
 .midnightText {
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   font-size: 16px;
   margin-top: 30px;
   margin-left: 15px;
@@ -309,14 +317,16 @@
   text-shadow: 2px 1px 4px #00000073;
 }
 .closeDayText{
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   width: 600px;
 }
 .openingHourText{
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   width: 600px;
 }
-/* .informationListTitle p {
- width: 600px;
-} */
+
 .chairIcon{
   margin-top: 15px;
 }
@@ -324,6 +334,8 @@
   display: flex;
 }
 .chairText{
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   margin-top: 6px;
   margin-left: 30px;
   font-size: 1.3rem;
@@ -331,6 +343,8 @@
   text-shadow: 1px 1px 2px #00000085;
 }
 .chairCharacter{
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   margin-top: 12px;
   margin-left: 5px;
 }
@@ -339,6 +353,8 @@
   margin-left: 5px;
 }
 .budgetForLapText{
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   margin-left: 20px;
   margin-top: 10px;
   color: #871b28;
@@ -362,7 +378,13 @@
 .otherMemo{
   margin-left: 40px;
 }
+.addressText{
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
+}
 .maxMember{
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   margin-left: 40px;
   margin-top: -5px;
   font-weight: 900;
@@ -376,6 +398,8 @@
   margin-top: 5px;
 }
 .reservedText{
+  font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
   margin-top: -10px;
   text-align: center;
   font-weight: 900;
@@ -619,6 +643,8 @@
     display: block;
   }
   .balloon1 .chatting {
+    font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
     width: 100%;
     text-align: left;
   }
@@ -644,6 +670,8 @@
     border-radius: 50%;
   }
   .balloon6 .chatting {
+    font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
     width: 100%;
     text-align: left;
   }
@@ -737,6 +765,8 @@
     margin: 10px 20px;
   }
   .mycomment .calenderText {
+    font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
@@ -916,6 +946,8 @@
     width: 80px;
   }
   .reservedText{
+    font-family: "Scheherazade New", serif;
+  font-family: "Shippori Mincho B1", serif;
     margin-top: -10px;
     font-size: 15px;
   }

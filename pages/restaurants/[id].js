@@ -89,7 +89,7 @@ const Detail = ({ data }) => {
           />
           <div className={classes.address}>
             <BsFillSignpostFill />
-            <p style={{ marginTop: "-5px" }}>{data.results.shop[0].address}</p>
+            <p  className={classes.addressText}style={{ marginTop: "-5px" }}>{data.results.shop[0].address}</p>
           </div>
         </div>
       </div>
@@ -159,7 +159,6 @@ const Detail = ({ data }) => {
   <div className={` ${ closeLength ? classes.shortClose : classes.close} ${classes.mycomment}`}>
     <p className={classes.calenderText}>
       {toggleOpenIcon}
-      {/* <br/> */}
     {data.results.shop[0].close}
     </p>
   </div>

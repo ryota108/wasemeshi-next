@@ -31,16 +31,6 @@
   opacity: 0;
   transition-duration: 0.4s;
 }
- .container{
- background-color:green;
- font-size:28;
- }
- .lead{
-   color: green;
- }
- p {
-
- }
 .contents.is-open {
   border: 1px solid black;
   padding: 10px;

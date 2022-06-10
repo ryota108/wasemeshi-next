@@ -207,7 +207,7 @@ export default function Home({ data }) {
                       <img className="shop-img" src={item.photo.pc.l} />
                     </div>
                     <h3 className="shop-title">{item.name}</h3>
-                    <p>{item.catch}</p>
+                    <p className="shopCardCatch">{item.catch}</p>
                     <hr align="left" color="#871b28" width="300px" />
                     <div className="flex">
                       <div className="price-area">

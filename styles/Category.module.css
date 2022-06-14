@@ -156,7 +156,7 @@
 }
 .resetButton{
   position: relative;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Shippori Mincho B1","游明朝", serif;
   left: 60px;
   background-color: white;
   border: 1px solid black;
@@ -225,7 +225,7 @@
  margin-top: 28px;
 }
 .categoryText{
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "游明朝", serif;
   position: relative;
   top: -120px;
   left: 100px;
@@ -238,7 +238,7 @@
   /* font-family:'Times New Roman', Times, serif; */
 }
 .categoryRamenText{
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "游明朝", serif;
   position: relative;
   top: -120px;
   left: 80px;
@@ -271,7 +271,7 @@
   top: 3px;
 }
 .searchButton{
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Shippori Mincho B1","游明朝", serif;
   position: relative;
   background-color: #871b28;
   border: 1px solid black;
@@ -383,7 +383,8 @@
   .searchButton{
     position: relative;
     margin-top: 30px;
-    left:-100px;
+    top: 50px;
+    left:-150px;
     font-family: "Shippori Mincho B1", serif;
     margin-left: 0%;
     align-items: center;

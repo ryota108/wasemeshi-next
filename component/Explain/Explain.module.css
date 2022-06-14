@@ -37,8 +37,7 @@
 }
 
 .sub{
-  font-family: "Scheherazade New", serif;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Shippori Mincho B1","游明朝", serif;
   position: absolute;
   width: 800px;
   font-weight: 600;

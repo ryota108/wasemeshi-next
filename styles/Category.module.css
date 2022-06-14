@@ -103,25 +103,6 @@
   top: 10px;
   left: 15px;
 }
-.searchButton{
-  font-family: "Shippori Mincho B1", serif;
-  position: relative;
-  left: 80px;
-  background-color:#871b28 ;
-  border: 1px solid black;
-  font-weight: 600;
-  padding: 10px 40px;
-  margin: 10px auto;
-  cursor: pointer;
-  border-radius: 20px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  color: white;
-  text-decoration: none !important;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 .moneyCategory{
   list-style: none;
   display: flex;
@@ -400,6 +381,8 @@
     left: 15px;
   }
   .searchButton{
+    position: relative;
+    left:0px;
     font-family: "Shippori Mincho B1", serif;
     margin-left: 0%;
     align-items: center;

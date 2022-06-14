@@ -354,6 +354,9 @@ a {
 }
 
 @media screen and (max-width: 480px) {
+  .searchInput{
+    width:70%;
+  }
   .reset-button {
     position: relative;
     left: 0px;

@@ -92,6 +92,7 @@
 }
 
 .categoryExplain{
+  font-family: "Shippori Mincho B1", serif;
   position: relative;
   top: -10px;
   left: 25px;
@@ -361,6 +362,7 @@
     list-style: none;
   }
   .sceneExplain{
+    font-family: "Shippori Mincho B1", serif;
     font-size: 10px;
     font-weight: 800;
     position: relative;
@@ -394,8 +396,11 @@
     left: 15px;
   }
   .searchButton{
+    /* position: relative;
+    left: 80px; */
     position: relative;
-    left: 80px;
+    right: 50%;
+    align-items: center;
     background-color:#871b28 ;
     border: 1px solid black;
     font-weight: 600;
@@ -447,7 +452,7 @@
     text-align: left;
   }
   .moneyExplainLong{
-    font-size: 12px;
+    font-size: 10px;
     position: relative;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;

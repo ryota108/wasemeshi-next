@@ -35,7 +35,7 @@
 }
 .sectionTitle{
   font-size: 18px;
-  font-family: "Shippori Mincho B1", serif;
+  font-family: "Shippori Mincho B1","游明朝", serif;
     text-shadow: 1px 2px 3px #808080;
 }
 
@@ -284,7 +284,6 @@
   color: white;
   text-decoration: none !important;
   font-size: 20px;
-  font-family: serif;
   margin-left: 15%;
 }
 .clickedCategoryBtn{
@@ -298,6 +297,7 @@
 }
 @media screen and (max-width:480px) {
   .detailButton{
+    margin-top: 30px;
     display: inline-block;
     box-shadow: 2px 1px 5px #000000bf;
   }
@@ -383,7 +383,7 @@
   .searchButton{
     position: relative;
     margin-top: 30px;
-    top: 50px;
+    top: 40px;
     left:-150px;
     font-family: "Shippori Mincho B1", serif;
     margin-left: 0%;

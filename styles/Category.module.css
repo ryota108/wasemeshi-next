@@ -104,6 +104,7 @@
   left: 15px;
 }
 .searchButton{
+  font-family: "Shippori Mincho B1", serif;
   position: relative;
   left: 80px;
   background-color:#871b28 ;
@@ -174,7 +175,7 @@
 }
 .resetButton{
   position: relative;
-  /* display: none; */
+  font-family: "Shippori Mincho B1", serif;
   left: 60px;
   background-color: white;
   border: 1px solid black;
@@ -243,6 +244,7 @@
  margin-top: 28px;
 }
 .categoryText{
+  font-family: "Shippori Mincho B1", serif;
   position: relative;
   top: -120px;
   left: 100px;
@@ -255,6 +257,7 @@
   font-family:'Times New Roman', Times, serif;
 }
 .categoryRamenText{
+  font-family: "Shippori Mincho B1", serif;
   position: relative;
   top: -120px;
   left: 80px;
@@ -273,7 +276,7 @@
 }
 
 .genreTitle{
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Shippori Mincho B1", serif;
   font-weight: 900;
 }
 .genreTitleBox{
@@ -287,6 +290,7 @@
   top: 3px;
 }
 .searchButton{
+  font-family: "Shippori Mincho B1", serif;
   position: relative;
   background-color: #871b28;
   border: 1px solid black;
@@ -396,9 +400,8 @@
     left: 15px;
   }
   .searchButton{
-    /* position: relative;
-    left: 80px; */
-    margin-right: 20px;
+    font-family: "Shippori Mincho B1", serif;
+    margin-left: 0%;
     align-items: center;
     background-color:#871b28 ;
     border: 1px solid black;

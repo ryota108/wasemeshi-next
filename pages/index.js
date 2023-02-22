@@ -10,6 +10,7 @@ import { MdSmokingRooms } from "react-icons/md";
 import { BiChair } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Footer from "../component/Footer/Footer";
 
 const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場&count=10`;
 
@@ -56,6 +57,7 @@ export default function Home({ data }) {
   const resetSubmitHandler = (prev) => {
     setReset(prev);
   };
+
 
   const [keyword, setKeyword] = useState("");
 
@@ -196,6 +198,7 @@ export default function Home({ data }) {
         <span className="resultReturn">{page.results_available}</span>
         <h3 className="resultReturnText">件</h3>
       </div>
+      <Footer/>
       <ul className="flex" style={{ flexWrap: "wrap" }}>
         {shop.map((item, index) => {
           return (

@@ -9,6 +9,7 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { MdKeyboardArrowUp } from "react-icons/md";
+import Footer from "../Footer/Footer";
 
 const Header = (props) => {
   const handleClick = () => {

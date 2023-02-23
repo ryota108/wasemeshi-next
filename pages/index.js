@@ -10,6 +10,9 @@ import { MdSmokingRooms } from "react-icons/md";
 import { BiChair } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Footer from "../component/Footer/Footer";
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
 
 const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場&count=10`;
 
@@ -34,6 +37,8 @@ export default function Home({ data }) {
     shop: defaultShops = [],
   } = data.results;
 
+  console.log(data)
+
   const [categoryValue, setCategoryValue] = useState({
     meat: false,
     cafe: false,
@@ -56,6 +61,24 @@ export default function Home({ data }) {
   const resetSubmitHandler = (prev) => {
     setReset(prev);
   };
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        light: '#757ce8',
+        main: '#871b28',
+        dark: '#002884',
+        contrastText: '#fff',
+      },
+      secondary: {
+        light: '#ff7961',
+        main: '#f44336',
+        dark: '#ba000d',
+        contrastText: '#000',
+      },
+    },
+  });
+
 
   const [keyword, setKeyword] = useState("");
 
@@ -176,7 +199,7 @@ export default function Home({ data }) {
     setCategoryValue(data);
   };
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Header />
       <Explain />
       <form onSubmit={handlerOnSubmitSearch} className="text-center">
@@ -249,6 +272,6 @@ export default function Home({ data }) {
           title="ホットペッパー Webサービス"
         />
       </a>
-    </>
+    </ThemeProvider>
   );
 }

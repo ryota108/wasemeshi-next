@@ -15,6 +15,7 @@ import { BiSortDown } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 import { useState, useReducer } from "react";
 import FadeUp from "../UI/FadeUp";
+import ScrollableTabsButtonForce from "../Navigation/TabsNavigation";
 
 const Category = (props) => {
   const [clickDetail, setClickDetail] = useState(false);

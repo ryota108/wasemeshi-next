@@ -13,6 +13,7 @@ import { useInView } from "react-intersection-observer";
 import Footer from "../component/Footer/Footer";
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
+import Card from "../component/UI/Card";
 
 const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場&count=10`;
 
@@ -220,45 +221,11 @@ export default function Home({ data }) {
         <h3 className="resultReturnText">件</h3>
       </div>
       <ul className="flex" style={{ flexWrap: "wrap" }}>
-        {shop.map((item, index) => {
-          return (
-            <FadeUp key={index}>
-              <li className="shop" key={index}>
-                <Link key={index} href={`restaurants/${item.id}`}>
-                  <div className="shop-card">
-                    <div className="img-box">
-                      <img className="shop-img" src={item.photo.pc.l} />
-                    </div>
-                    <h3 className="shop-title">{item.name}</h3>
-                    <p className="shopCardCatch">{item.catch}</p>
-                    <hr align="left" color="#871b28" width="300px" />
-                    <div className="flex">
-                      <div className="price-area">
-                        <AiFillMoneyCollect
-                          key={index}
-                          size="25px"
-                          className="moneyMiniIcon"
-                        />{" "}
-                        <h4 className="moneyInfo">{item.budget.name}</h4>
-                      </div>
-                      <div className="flex">
-                        <BiChair size="20px" />
-                        <p className="chairCharacter">
-                          {item.capacity}
-                          <span>席</span>
-                        </p>
-                      </div>
-                      <div className="flex">
-                        <MdSmokingRooms size="20px" />
-                        <p className="smokingText">{item.non_smoking}</p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </li>
-            </FadeUp>
-          );
-        })}
+        {shop.map((item)=>(
+          <FadeUp key={item.id}>
+            <Card title={item.name} explain={item.catch} image={item.photo.pc.l} seat={item.capacity}price={item.budget.name}smoking={item.non_smoking} key={item.id} id={item.id}/>
+          </FadeUp>
+        ))}
       </ul>
       <div ref={ref}></div>
       {!inView && <img src="/images/loading.gif" className="loadingSpinner" />}

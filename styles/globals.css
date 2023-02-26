@@ -377,3 +377,19 @@ a {
   }
 
 }
+
+
+.card_title {
+  font-family: "Sawarabi Mincho", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+}
+
+.long_title {
+  font-size: 13px;
+  line-height: 18px;
+}

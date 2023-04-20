@@ -14,6 +14,7 @@ import Footer from "../component/Footer/Footer";
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import Card from "../component/UI/Card";
+import Notification from "../component/Notification/NotificationList";
 
 const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場&count=10`;
 
@@ -38,7 +39,6 @@ export default function Home({ data }) {
     shop: defaultShops = [],
   } = data.results;
 
-  console.log(data)
 
   const [categoryValue, setCategoryValue] = useState({
     meat: false,
@@ -203,6 +203,7 @@ export default function Home({ data }) {
     <ThemeProvider theme={theme}>
       <Header />
       <Explain />
+      <Notification/>
       <form onSubmit={handlerOnSubmitSearch} className="text-center">
         <input
           type="search"

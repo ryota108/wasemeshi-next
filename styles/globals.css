@@ -83,7 +83,7 @@ a {
   font-weight: 700;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .shop {
     margin-bottom: 20px;
   }
@@ -195,7 +195,7 @@ a {
   text-shadow: 2px 2px 3px #0e0e0e80;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .resultShow {
     width: 75px;
     height: 75px;
@@ -352,7 +352,7 @@ a {
   width: 50px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .searchInput{
     width:70%;
   }
@@ -378,6 +378,12 @@ a {
 
 }
 
+.restaurantsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-inline-start: 0px;
+}
 
 .card_title {
   font-family: "Sawarabi Mincho", serif;

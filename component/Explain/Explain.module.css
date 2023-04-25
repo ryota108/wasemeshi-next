@@ -1,5 +1,6 @@
 .globalContent {
   width: 86%;
+  /* min-width: 1000px; */
   margin-top: 100px;
   margin-left: 80px;
   height: 850px;
@@ -46,12 +47,12 @@
   letter-spacing: 3px;
   font-size: 20px;
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 700px) {
   .globalContent {
     width: 60%;
     margin-top: 40px;
     height: 500px;
-    /* background-color: #ecece4; */
+    min-width: none;
     display: block;
   }
   .content{

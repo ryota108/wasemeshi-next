@@ -30,3 +30,16 @@
     font-size: 1.3em;
     text-shadow: 1px 2px 3px #808080;
   }
+
+  @media screen and (max-width: 500px) {
+    .newsTitle {
+      width: 100%;
+      font-size: 0.8rem;
+      margin-right: 10px;
+      margin-left: -20px;
+    }
+    .newsDate {
+      font-size: 0.5rem;
+      width: 30%;
+    }
+  }

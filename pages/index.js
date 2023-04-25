@@ -221,7 +221,7 @@ export default function Home({ data }) {
         <span className="resultReturn">{page.results_available}</span>
         <h3 className="resultReturnText">件</h3>
       </div>
-      <ul className="flex" style={{ flexWrap: "wrap" }}>
+      <ul className="restaurantsList" >
         {shop.map((item)=>(
           <FadeUp key={item.id}>
             <Card title={item.name} explain={item.catch} image={item.photo.pc.l} seat={item.capacity}price={item.budget.name}smoking={item.non_smoking} key={item.id} id={item.id}/>

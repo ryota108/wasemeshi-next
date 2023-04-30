@@ -163,7 +163,7 @@
   opacity: 0;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
   .mobileMenuIcon {
     margin-left: 65px;
     margin-top: 5px;
@@ -382,5 +382,11 @@
   }
   .elements > li:nth-child(1) {
     padding-left: 0px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .topButton {
+    display: none;
   }
 }

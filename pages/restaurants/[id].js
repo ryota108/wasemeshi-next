@@ -68,9 +68,7 @@ const Detail = ({ data }) => {
           return `最大${member}人`
         }
       }
-      // capacityが小規模 2,3人　~15 グループにおすすめ　40～　打ち上げにおすすめ　80~
-      // console.log(data.results.shop[0].credit_card)
-  // data.results.shop[0].credit_card.map((card)=>{console.log(card.name)})
+
   return (
     <>
       <Header />
@@ -293,8 +291,9 @@ const Detail = ({ data }) => {
         allowFullScreen=""
         className={classes.map}
       ></iframe>
-      <AiFillHome/><Link href="/"className={classes.homeLink}>＜Homeに戻る</Link>
-      {console.log(data)}
+      <div style={{display:"flex",alignItems:"center"}}>
+      <AiFillHome/><Link href="/"className={classes.homeLink}>&lt;Homeに戻る</Link>
+      </div>
     </>
   );
 };

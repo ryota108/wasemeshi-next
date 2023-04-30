@@ -187,7 +187,6 @@ const Category = (props) => {
       manyBill: moneyState.manyBill,
     });
   };
-  //  console.log(moneyState,categoryState,sceneState)
   return (
     <>
       <div className={classes.laptopCategory}>

@@ -22,7 +22,7 @@ const Header = (props) => {
   return (
     <>
       <header className={classes.header}>
-        {/* <Link href="/"> */}
+       <div className="flex">
         <div className={classes.logo}>
           <Link href="/">
             <img
@@ -36,10 +36,8 @@ const Header = (props) => {
             <Link href="/">asemeshi</Link>
           </h1>
         </div>
-        {/* </Link> */}
         <button
           onClick={mobileMenuHandler}
-          // className={`mobile-menu-icon ${clicked ? " menu-open" : ""}`}
           className={`${classes.mobileMenuIcon} ${
             clicked ? classes.menuOpen : ""
           }`}
@@ -48,6 +46,7 @@ const Header = (props) => {
           <span></span>
           <span></span>
         </button>
+        </div>
         <ul className={classes.elements}>
           <li>
             <Link href="/service">Service</Link>

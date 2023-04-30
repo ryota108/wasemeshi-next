@@ -11,8 +11,8 @@ import { BiChair } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import Footer from "../component/Footer/Footer";
-import { createTheme } from '@mui/material/styles';
-import { ThemeProvider } from '@emotion/react';
+import { createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@emotion/react";
 import Card from "../component/UI/Card";
 import Notification from "../component/Notification/NotificationList";
 
@@ -38,7 +38,6 @@ export default function Home({ data }) {
     results_returned = 1,
     shop: defaultShops = [],
   } = data.results;
-
 
   const [categoryValue, setCategoryValue] = useState({
     meat: false,
@@ -66,20 +65,19 @@ export default function Home({ data }) {
   const theme = createTheme({
     palette: {
       primary: {
-        light: '#757ce8',
-        main: '#871b28',
-        dark: '#002884',
-        contrastText: '#fff',
+        light: "#757ce8",
+        main: "#871b28",
+        dark: "#002884",
+        contrastText: "#fff",
       },
       secondary: {
-        light: '#ff7961',
-        main: '#f44336',
-        dark: '#ba000d',
-        contrastText: '#000',
+        light: "#ff7961",
+        main: "#f44336",
+        dark: "#ba000d",
+        contrastText: "#000",
       },
     },
   });
-
 
   const [keyword, setKeyword] = useState("");
 
@@ -203,8 +201,8 @@ export default function Home({ data }) {
     <ThemeProvider theme={theme}>
       <Header />
       <Explain />
-      <Notification/>
-      <form onSubmit={handlerOnSubmitSearch} className="text-center">
+      <Notification />
+      {/* <form onSubmit={handlerOnSubmitSearch} className="text-center">
         <input
           type="search"
           name="query"
@@ -214,6 +212,16 @@ export default function Home({ data }) {
         <button className="searchButton">
           <AiOutlineSearch color="white" size="18px" />
         </button>
+      </form> */}
+      <form onSubmit={handlerOnSubmitSearch} className="search-form-007">
+        <label>
+        <input
+          type="search"
+          name="query"
+          placeholder="キーワードを入力して下さい"
+        />
+        </label>
+        <button aria-label="検索"/>
       </form>
       <Category onReset={resetHandler} onSubmit={submitCategoryHandler} />
       <div className="flex">
@@ -221,10 +229,19 @@ export default function Home({ data }) {
         <span className="resultReturn">{page.results_available}</span>
         <h3 className="resultReturnText">件</h3>
       </div>
-      <ul className="restaurantsList" >
-        {shop.map((item)=>(
+      <ul className="restaurantsList">
+        {shop.map((item) => (
           <FadeUp key={item.id}>
-            <Card title={item.name} explain={item.catch} image={item.photo.pc.l} seat={item.capacity}price={item.budget.name}smoking={item.non_smoking} key={item.id} id={item.id}/>
+            <Card
+              title={item.name}
+              explain={item.catch}
+              image={item.photo.pc.l}
+              seat={item.capacity}
+              price={item.budget.name}
+              smoking={item.non_smoking}
+              key={item.id}
+              id={item.id}
+            />
           </FadeUp>
         ))}
       </ul>

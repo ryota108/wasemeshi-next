@@ -202,17 +202,6 @@ export default function Home({ data }) {
       <Header />
       <Explain />
       <Notification />
-      {/* <form onSubmit={handlerOnSubmitSearch} className="text-center">
-        <input
-          type="search"
-          name="query"
-          className="searchInput"
-          placeholder="キーワードを入力して下さい"
-        />
-        <button className="searchButton">
-          <AiOutlineSearch color="white" size="18px" />
-        </button>
-      </form> */}
       <form onSubmit={handlerOnSubmitSearch} className="search-form-007">
         <label>
         <input

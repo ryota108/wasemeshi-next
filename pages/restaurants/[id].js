@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { BsFillSignpostFill } from "react-icons/bs";
 import { AiFillCreditCard } from "react-icons/ai";
 import { AiOutlineWifi } from "react-icons/ai";

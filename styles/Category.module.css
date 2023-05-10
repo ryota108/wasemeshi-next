@@ -4,7 +4,6 @@
 }
 .detailButton {
   position: relative;
-  /* display: none; */
   left: 80px;
   background-color: white;
   border: 1px solid black;
@@ -296,6 +295,10 @@
   filter: brightness(1.2);
 }
 @media screen and (max-width: 700px) {
+  .resetButton {
+    position: block;
+    left:0px;
+  }
   .detailButton {
     /* margin-top: 50px; */
     display: inline-block;

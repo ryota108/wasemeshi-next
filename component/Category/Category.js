@@ -2,7 +2,7 @@ import { FaSearchDollar } from "react-icons/fa";
 import { IoMdFunnel } from "react-icons/io";
 import { FaMinus } from "react-icons/fa";
 import { GiMeat } from "react-icons/gi";
-import { MdCleaningServices, MdRamenDining } from "react-icons/md";
+import {  MdRamenDining } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosCafe } from "react-icons/io";
 import { RiCoinFill } from "react-icons/ri";
@@ -15,7 +15,6 @@ import { BiSortDown } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 import { useState, useReducer } from "react";
 import FadeUp from "../UI/FadeUp";
-import ScrollableTabsButtonForce from "../Navigation/TabsNavigation";
 
 const Category = (props) => {
   const [clickDetail, setClickDetail] = useState(false);
@@ -479,16 +478,13 @@ const Category = (props) => {
             </ul>
           </div>
           <div className={classes.detailSearch}>
-            <div>
-              <button className={classes.resetButton} onClick={resetHandler}>
-                <div className="flex">
+              <button style={{display:"flex"}} className={classes.resetButton} onClick={resetHandler}>
                   <img
                     className={classes.resetIcon}
                     src="/images/1.png"
                     width="50px"
                   />
                   <p>上記の内容をリセットする</p>
-                </div>
               </button>
               <button
                 onClick={detailSearchHandler}
@@ -497,7 +493,6 @@ const Category = (props) => {
                 <AiOutlineSearch size="15px" />
                 上記の内容で検索
               </button>
-            </div>
           </div>
         </FadeUp>
       )}

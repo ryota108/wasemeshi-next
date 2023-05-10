@@ -1,16 +1,9 @@
-import Head from "next/head";
-import Link from "next/link";
 import Category from "../component/Category/Category";
 import FadeUp from "../component/UI/FadeUp";
 import Explain from "../component/Explain/Explain";
 import Header from "../component/Header/Header";
-import { AiOutlineSearch } from "react-icons/ai";
-import { AiFillMoneyCollect } from "react-icons/ai";
-import { MdSmokingRooms } from "react-icons/md";
-import { BiChair } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import Footer from "../component/Footer/Footer";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
 import Card from "../component/UI/Card";

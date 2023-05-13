@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import classes from "./FadeUp.module.css";
+import classes from "../../styles/FadeUp.module.css";
 const FadeUp = (props) => {
   const { ref, inView } = useInView({ triggerOnce: true });
   return (

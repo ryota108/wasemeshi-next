@@ -1,7 +1,4 @@
-// import waseda from "../../images/waseda.jfif";
-// import "./Explain.css";
-// import FadeRight from "../UI/FadeRight";
-import classes from "./Explain.module.css";
+import classes from "../../styles/Explain.module.css";
 const Explain = () => {
   return (
     <div className={classes.globalContent}>
@@ -9,11 +6,9 @@ const Explain = () => {
         <img src="/images/waseda.jfif" alt="" />
       </div>
       <div className={classes.titleName}>
-        {/* <FadeRight> */}
           <h1 className={classes.main}>
             <span className={classes.spanColor}>W</span>hy establish?
           </h1>
-        {/* </FadeRight> */}
         <p className={classes.sub} >
           コロナで数々の早稲田の青春の味,早大生の愛する飲食店（
           <span>ワセメシ</span>

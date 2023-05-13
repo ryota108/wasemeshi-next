@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   padding: 0;
@@ -14,9 +17,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
 .shop {
   list-style: none;
 }
@@ -83,22 +83,6 @@ a {
   font-weight: 700;
 }
 
-@media screen and (max-width: 700px) {
-  .shop {
-    margin-bottom: 20px;
-  }
-  .shop-img:active {
-    filter: brightness(60%);
-    cursor: pointer;
-    transform: scale(1.1, 1.1);
-    transition: all 1.5s;
-  }
-  .shop-card:active {
-    margin-top: -5px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
-    transition: all 0.5s;
-  }
-}
 
 .title-name .main > span {
   color: #871b28;
@@ -196,6 +180,20 @@ a {
 }
 
 @media screen and (max-width: 700px) {
+    .shop {
+      margin-bottom: 20px;
+    }
+    .shop-img:active {
+      filter: brightness(60%);
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+      transition: all 1.5s;
+    }
+    .shop-card:active {
+      margin-top: -5px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+      transition: all 0.5s;
+    }
   .resultShow {
     width: 75px;
     height: 75px;

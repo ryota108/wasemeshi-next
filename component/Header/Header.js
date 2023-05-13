@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import classes from "./Header.module.css";
+import classes from "../../styles/Header.module.css";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";

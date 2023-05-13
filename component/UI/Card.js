@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@mui/system'
-import style from "./Card.module.css"
+import style from "../../styles/Card.module.css"
 import CurrencyYenIcon from '@mui/icons-material/CurrencyYen';
 import ChairOutlinedIcon from '@mui/icons-material/ChairOutlined';
 import SmokingRoomsIcon from '@mui/icons-material/SmokingRooms';

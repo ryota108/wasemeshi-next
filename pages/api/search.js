@@ -14,6 +14,8 @@ const handler = async (req, res) => {
     noodle: req.query.noodle === "true",
     meat: req.query.meat === "true",
     cafe: req.query.cafe === "true",
+    izkaya: req.query.izkaya === "true",
+    chinese: req.query.chinese === "true",
   };
 
   const queryMapping = {
@@ -27,6 +29,8 @@ const handler = async (req, res) => {
     noodle: "&genre=G013",
     meat: "&genre=G008&count=20",
     cafe: "&genre=G014&count=15",
+    izkaya: "&genre=G001&count=100",
+    chinese: "&genre=G007,G017&count=40",
   };
 
   let url = defaultEndpoint;

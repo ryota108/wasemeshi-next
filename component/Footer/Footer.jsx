@@ -10,7 +10,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
-import style from "../Footer/Footer.module.css"
+import style from "../../styles/Footer.module.css"
 
 const actions = [
   { icon: <InfoIcon />, name: 'service' },

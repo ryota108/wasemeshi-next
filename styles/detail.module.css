@@ -282,13 +282,13 @@
   left: 35px;
   top: 20px;
 }
-.br{
+.br {
   display: none;
 }
-.lineBc{
+.lineBc {
   display: none;
 }
-.infoTitle{
+.infoTitle {
   display: none;
 }
 
@@ -302,13 +302,13 @@
   color: #871b28;
   font-size: 1.3em;
 }
-.infoForLaptop{
+.infoForLaptop {
   position: absolute;
   top: 520px;
   left: 550px;
   list-style: none;
 }
-.infoBorder{
+.infoBorder {
   width: 600px;
 }
 .informationListTitle h2 {
@@ -316,24 +316,24 @@
   font-family: "Scheherazade New", serif;
   text-shadow: 2px 1px 4px #00000073;
 }
-.closeDayText{
+.closeDayText {
   font-family: "Scheherazade New", serif;
   font-family: "Shippori Mincho B1", serif;
   width: 600px;
 }
-.openingHourText{
+.openingHourText {
   font-family: "Scheherazade New", serif;
   font-family: "Shippori Mincho B1", serif;
   width: 600px;
 }
 
-.chairIcon{
+.chairIcon {
   margin-top: 15px;
 }
-.chairArea{
+.chairArea {
   display: flex;
 }
-.chairText{
+.chairText {
   font-family: "Scheherazade New", serif;
   font-family: "Shippori Mincho B1", serif;
   margin-top: 6px;
@@ -342,17 +342,17 @@
   color: #871b28;
   text-shadow: 1px 1px 2px #00000085;
 }
-.chairCharacter{
+.chairCharacter {
   font-family: "Scheherazade New", serif;
   font-family: "Shippori Mincho B1", serif;
   margin-top: 12px;
   margin-left: 5px;
 }
-.budgetForLapIcon{
+.budgetForLapIcon {
   margin-top: 18px;
   margin-left: 5px;
 }
-.budgetForLapText{
+.budgetForLapText {
   font-family: "Scheherazade New", serif;
   font-family: "Shippori Mincho B1", serif;
   margin-left: 20px;
@@ -362,27 +362,27 @@
   text-shadow: 1px 1px 2px #00000085;
   margin-bottom: 0px;
 }
-.cheerIcon{
+.cheerIcon {
   display: none;
 }
-.infoTitleForLap{
-  font-family:"Times New Roman", Times, serif ;
+.infoTitleForLap {
+  font-family: "Times New Roman", Times, serif;
   text-shadow: 1px 1px 2px #00000085;
   margin-bottom: 0px;
 }
-.infoTitleForLap span{
+.infoTitleForLap span {
   color: #871b28;
   font-size: 1.3em;
-  font-family:"Times New Roman", Times, serif ;
+  font-family: "Times New Roman", Times, serif;
 }
-.otherMemo{
+.otherMemo {
   margin-left: 40px;
 }
-.addressText{
+.addressText {
   font-family: "Scheherazade New", serif;
   font-family: "Shippori Mincho B1", serif;
 }
-.maxMember{
+.maxMember {
   font-family: "Scheherazade New", serif;
   font-family: "Shippori Mincho B1", serif;
   margin-left: 40px;
@@ -390,14 +390,14 @@
   font-weight: 900;
   font-size: 18px;
 }
-.partyIcon{
+.partyIcon {
   margin-left: 20px;
 }
-.reservedIcon{
+.reservedIcon {
   margin-left: 25px;
   margin-top: 5px;
 }
-.reservedText{
+.reservedText {
   font-family: "Scheherazade New", serif;
   font-family: "Shippori Mincho B1", serif;
   margin-top: -10px;
@@ -468,7 +468,7 @@
   .titleContent {
     height: 100px;
   }
-  .infoTitle{
+  .infoTitle {
     display: flex;
   }
   .description {
@@ -507,7 +507,7 @@
   .informationList {
     list-style: none;
   }
-  .laptopBorder{
+  .laptopBorder {
     display: none;
   }
   .informationBox {
@@ -618,157 +618,8 @@
     display: block;
   }
 
-  /*以下、②左側のコメント*/
-
-  .balloon1 {
-    width: 100%;
-    margin-top: 40px;
-    overflow: hidden;
-  }
-
-  .balloon1 .faceicon {
-    float: left;
-    margin-right: -50px;
-    width: 50px;
-    background-color: #ffffff;
-    border-radius: 50%;
-  }
-
-  .balloon1 .faceicon img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    display: block;
-  }
-  .balloon1 .chatting {
-    font-family: "Scheherazade New", serif;
-  font-family: "Shippori Mincho B1", serif;
-    width: 100%;
-    text-align: left;
-  }
-  .balloon6 {
-    width: 100%;
-    margin: 10px 0;
-    overflow: hidden;
-  }
-
-  .balloon6 .faceicon {
-    float: left;
-    display: block;
-    margin-right: -50px;
-    width: 50px;
-    background-color: #ffffff;
-    border-radius: 50%;
-  }
-
-  .balloon6 .faceicon img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-  }
-  .balloon6 .chatting {
-    font-family: "Scheherazade New", serif;
-  font-family: "Shippori Mincho B1", serif;
-    width: 100%;
-    text-align: left;
-  }
-  .says {
-    display: inline-block;
-    position: relative;
-    margin: 10px 0 0 60px;
-    padding: 10px;
-    max-width: 250px;
-    border-radius: 12px;
-    background: #edf1ee;
-  }
-
-  .says:after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 3px;
-    left: -19px;
-    border: 8px solid transparent;
-    border-right: 18px solid #edf1ee;
-    -webkit-transform: rotate(35deg);
-    transform: rotate(35deg);
-  }
-
-  .says p {
-    margin: 0;
-    padding: 0;
-    color: #5f111a;
-    font-weight: 800;
-    font-size: 18px;
-  }
-
-  .myCommentBudget {
-    margin-left: 42%;
-    margin-top: -30px;
-  }
-  .myCommentBudget p {
-    display: inline-block;
-    position: relative;
-    margin: 0 10px 0 0;
-    padding: 8px;
-    max-width: 250px;
-    border-radius: 12px;
-    background-color: rgba(241, 233, 223, 0.884);
-    font-size: 12px;
-  }
-  .myCommentBudget p:after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: -18px;
-    border: 8px solid transparent;
-    border-left: 18px solid rgba(241, 233, 223, 0.884);
-    -webkit-transform: rotate(-35deg);
-    transform: rotate(-35deg);
-  }
   /*以下、③右側の緑コメント*/
-  .mycomment {
-    margin-top: -25px;
-    margin-left: 35%;
-  }
-  .mycomment p {
-    display: inline-block;
-    position: relative;
-    margin: 0 10px 0 0;
-    padding: 8px;
-    max-width: 250px;
-    border-radius: 12px;
-    background-color: rgba(241, 233, 223, 0.884);
-    font-size: 12px;
-  }
 
-  .mycomment p:after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    right: -20px;
-    border: 8px solid transparent;
-    border-left: 18px solid rgba(241, 233, 223, 0.884);
-    -webkit-transform: rotate(-35deg);
-    transform: rotate(-35deg);
-  }
-  .shopIcon {
-    display: block;
-    margin-left: 80%;
-  }
-  .calenderIcon {
-    width: 50px;
-    height: 50px;
-    margin: 10px 20px;
-  }
-  .mycomment .calenderText {
-    font-family: "Scheherazade New", serif;
-  font-family: "Shippori Mincho B1", serif;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-  }
   .informationChatBar {
     display: flex;
     width: 100%;
@@ -926,26 +777,26 @@
     margin-left: 0px;
     margin-bottom: 0px;
   }
-  .infoForLaptop{
+  .infoForLaptop {
     display: none;
   }
-  .otherMemo{
+  .otherMemo {
     margin-left: 0px;
   }
-  .partyIcon{
+  .partyIcon {
     width: 75px;
     margin-top: 10px;
   }
-  .maxMember{
+  .maxMember {
     font-size: 15px;
     margin-left: 30px;
   }
-  .reservedIcon{
+  .reservedIcon {
     width: 80px;
   }
-  .reservedText{
+  .reservedText {
     font-family: "Scheherazade New", serif;
-  font-family: "Shippori Mincho B1", serif;
+    font-family: "Shippori Mincho B1", serif;
     margin-top: -10px;
     font-size: 15px;
   }

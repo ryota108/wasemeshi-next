@@ -10,8 +10,8 @@ import FadeUp from "../../component/UI/FadeUp";
 import Link from "next/link";
 import classes from "../../styles/detail.module.css";
 import Header from "../../component/Header/Header";
-import Chat from "../../component/UI/Chat";
-import InformationList from "../../component/UI/InformationList";
+import Chat from "../../component/UI/Chat.tsx";
+import InformationList from "../../component/UI/InformationList.tsx";
 import Box from "../../component/UI/Box.tsx";
 const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場&type=credit_card`;
 
@@ -115,6 +115,7 @@ const Detail = ({ data }) => {
           <h3 className={classes.shopBarName}>{shop.name}</h3>
           <IoCallOutline className={classes.callIcon} size="30px" />
         </div>
+ 
         {shopsInfo.map((shopInfo, index) => (
           <Chat
             key={index}

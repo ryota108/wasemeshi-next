@@ -1,7 +1,13 @@
 import React from "react";
 import classes from "../../styles/Chat.module.css";
 
-const Chat = ({ info, isShop = false, shopImg }) => {
+type Props = {
+  info: string;
+  isShop: boolean;
+  shopImg: string;
+};
+
+const Chat: React.FC<Props> = ({ info, isShop = false, shopImg }) => {
   const longInfo = info.length > 15;
   return (
     <>

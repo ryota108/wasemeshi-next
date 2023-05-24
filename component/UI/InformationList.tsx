@@ -1,9 +1,14 @@
 import React from "react";
 import classes from "../../styles/InformationList.module.css";
 
-const InformationList = ({ title, info }) => {
+type Props = {
+  title: string;
+  info: string;
+};
+
+const InformationList: React.FC<Props> = ({ title, info }) => {
   if (!info) {
-    return;
+    return null;
   }
   return (
     <>

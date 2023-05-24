@@ -1,5 +1,4 @@
 import { useInView } from "react-intersection-observer";
-import classes from "../../styles/ShowUp.module.css";
 const ShowUp = (props) => {
   const { ref, inView } = useInView({ triggerOnce: true, delay:props.delay });
   return (

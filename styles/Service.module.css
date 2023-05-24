@@ -1,4 +1,3 @@
-
 .servicesSection {
   margin-top: 75px;
 }
@@ -19,26 +18,8 @@
 .menu:hover,
 .menu:active,
 .menu.is-active {
-  background-color:#871b28;
+  background-color: #871b28;
   color: white;
-}
-.contents {
-  font-family: 'Times New Roman', Times, serif;
-  text-align: center;
-  line-height: 0;
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition-duration: 0.4s;
-}
-.contents.is-open {
-  border: 1px solid black;
-  padding: 10px;
-  line-height: normal;
-  height: auto;
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
 }
 
 .servicesSection {
@@ -73,119 +54,50 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.serviceBox {
-  background-color: rgba(255,255,255,0.1);
-  backdrop-filter: blur(2px);
-  max-width: 33.33%;
-  padding: 10px;
-  text-align: center;
-  color: white;
-  cursor: pointer;
+.aboutMe {
+  width: 76%;
+  height: 400px;
 }
-.serviceIcon {
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  border: 3px solid #871b28;
-  color: #871b28;
-  transform: rotate(45deg);
-  margin-bottom: 30px;
-  margin-top: 16px;
-  transition: 0.3s linear;
+.aboutMeContent {
+  border: 4px solid #871b28;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin-left: 16%;
+  margin-top: 1%;
 }
-.serviceIcon .icon {
-  line-height: 70px;
-  position: relative;
-  top: 18px;
-  font-size: 30px;
-  transform: rotate(-45deg);
-  font-size: 26px;
-}
-
-.serviceBox:hover .serviceIcon {
-  background: #871b28;
-  color: #ddd;
-}
-.serviceTitle {
-  font-size: 18px;
-  text-shadow: 1px 2px 3px #363434;
-  margin-bottom: 10px;
-}
-.serviceDesc {
-  font-size: 14px;
-}
-
-@media screen and (max-width: 960px) {
-  .serviceBox {
-    max-width: 45%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .serviceBox {
-    max-width: 50%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .servicesSection{
-    margin-top: 50px;
-  }
-  .serviceBox {
-    max-width: 100%;
-    background-color:transparent;
-    backdrop-filter: none;
-  }
-  .aboutMeContent .aboutMeIcon img{
-    height: 100px;
-  }
-  .aboutMeContent .aboutMeIcon{
-    width: 100px;
-  }
-  .aboutMe .aboutMeName{
-    margin-left: 105px;
-    margin-top: 0px;
-    font-size: 25px;
-  }
-  .aboutMe .aboutMeText{
-    font-size: 12px;
-    font-weight: 700;
-    padding: 0px 20px;
-
-  }
-}
-.faqSection{
-  filter: grayscale(40%);
-  }
-  .aboutMe{
-    width: 76%;
-    height: 400px;
-  }
-  .aboutMeContent{
-    border: 4px solid #871b28;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    margin-left: 16%;
-    margin-top: 1%;
-  }
-  .aboutMeIcon{
+.aboutMeIcon {
   background-color: #ddd;
   border-radius: 50%;
   width: 150px;
   margin: 0 auto;
   position: relative;
-  top:10px;
+  top: 10px;
+}
+.aboutMeIcon img {
+  height: 150px;
+}
+.aboutMeName {
+  text-align: center;
+}
+.aboutMeText {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 45px;
+}
+
+@media screen and (max-width: 480px) {
+  .servicesSection {
+    margin-top: 50px;
   }
-  .aboutMeIcon img{
-    height: 150px;
+  .aboutMeContent .aboutMeIcon img {
+    height: 100px;
   }
-  .aboutMeName{
-    margin-left: 450px;
-    margin-top: 5px;
-    font-size: 30px;
+  .aboutMeContent .aboutMeIcon {
+    width: 100px;
   }
-  .aboutMeText{
-    font-size: 18px;
-    font-weight: 700;
-    padding: 0 45px;
+  .aboutMeText {
+    font-size: 12px;
   }
+}

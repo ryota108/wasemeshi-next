@@ -7,7 +7,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { MdKeyboardArrowUp } from "react-icons/md";
 
-const Header = (props) => {
+const Header = () => {
   const handleClick = () => {
     window.open("https://twitter.com/Wasemeshi1");
   };

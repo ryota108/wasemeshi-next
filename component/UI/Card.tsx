@@ -33,7 +33,7 @@ const Card: React.FC<Props> = ({
   const longTitle = title.length > 14;
 
   if (title.length > 17) {
-    title = title.slice(0, 17) + "..";
+    title = title.slice(0, 15) + "..";
   }
 
   return (

@@ -405,6 +405,12 @@
   font-weight: 900;
   font-size: 20px;
 }
+
+.boxList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 700px) {
   .restaurant-logo {
     width: 0px;
@@ -500,7 +506,6 @@
   .catch {
     color: #871b28;
     font-size: 18px;
-    width: 280px;
     margin-left: 20px;
     font-family: "Scheherazade New", serif;
   }
@@ -618,8 +623,10 @@
     display: block;
   }
 
-  /*以下、③右側の緑コメント*/
-
+  .boxList {
+    justify-content: center;
+  }
+  
   .informationChatBar {
     display: flex;
     width: 100%;
@@ -725,8 +732,8 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 65%;
-    right: 76%;
+    top: 70%;
+    right: 78%;
     animation: finish ease-in-out 5.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
@@ -742,11 +749,7 @@
     text-align: justify;
     overflow-wrap: break-word;
   }
-  .cheerIcon {
-    display: block;
-    margin-left: 73%;
-    margin-top: -18%;
-  }
+
   .shortClose {
     margin-left: 44%;
   }
@@ -782,6 +785,7 @@
   }
   .otherMemo {
     margin-left: 0px;
+    padding-inline-start: 0px;
   }
   .partyIcon {
     width: 75px;

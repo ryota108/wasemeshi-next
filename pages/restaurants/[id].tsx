@@ -10,13 +10,28 @@ import FadeUp from "../../component/UI/FadeUp";
 import Link from "next/link";
 import classes from "../../styles/detail.module.css";
 import Header from "../../component/Header/Header";
-import Chat from "../../component/UI/Chat.tsx";
-import InformationList from "../../component/UI/InformationList.tsx";
-import Box from "../../component/UI/Box.tsx";
+import Chat from "../../component/UI/Chat";
+import InformationList from "../../component/UI/InformationList";
+import Box from "../../component/UI/Box";
 const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場&type=credit_card`;
 
+type ShopsInfoType = {
+  info: string;
+  isShop?: boolean;
+  shopImg?: string;
+};
+
+type InformationListType = {
+  title: string;
+  info: string;
+};
+
+type SearchStringFuncType = (paragraph: string, search: string) => boolean;
+
+type MaxMemberFunc = (member: string | number) => string;
+
 const Detail = ({ data }) => {
-  const searchString = (paragraph, search) => {
+  const searchString: SearchStringFuncType = (paragraph, search) => {
     return paragraph.includes(search);
   };
   const shop = data.results.shop[0];
@@ -27,7 +42,7 @@ const Detail = ({ data }) => {
   const midnight = searchString(shop.midnight, "営業している");
   const reserved = searchString(shop.charter, "貸切可");
 
-  const shopsInfo = [
+  const shopsInfo: ShopsInfoType[] = [
     { info: "予算" },
     { info: shop.budget.name, isShop: true, shopImg: shop.logo_image },
     { info: "定休日" },
@@ -36,7 +51,7 @@ const Detail = ({ data }) => {
     { info: shop.open, isShop: true, shopImg: shop.logo_image },
   ];
 
-  const informationList = [
+  const informationList: InformationListType[] = [
     {
       title: "予算",
       info: shop.budget.name,
@@ -59,7 +74,7 @@ const Detail = ({ data }) => {
     },
   ];
 
-  const maxMember = (member) => {
+  const maxMember: MaxMemberFunc = (member) => {
     return member === "" ? "未確認" : `最大${member}人`;
   };
 
@@ -73,12 +88,7 @@ const Detail = ({ data }) => {
       <div className={classes.titleContent}>
         <div>
           <h1 className={classes.shopName}>{shop.name}</h1>
-          <hr
-            className={classes.mainBorder}
-            color="#871b28"
-            width="100%"
-            align="left"
-          />
+          <hr className={classes.mainBorder} color="#871b28" />
           <div className={classes.address}>
             <BsFillSignpostFill />
             <p className={classes.addressText} style={{ marginTop: "-5px" }}>
@@ -93,11 +103,6 @@ const Detail = ({ data }) => {
         <img className={classes.shopImg} src={shop.photo.pc.l} />
       </div>
       <h2 className={classes.catch}>{shop.genre.catch}</h2>
-      <img
-        src="/images/cheer.png"
-        className={classes.cheerIcon}
-        width="100px"
-      />
       <div className={classes.infoTitle}>
         <img src="/images/comment.png" className={classes.comment} />
         <h1 className={`${classes.informationSectionTitle}`}>
@@ -115,7 +120,7 @@ const Detail = ({ data }) => {
           <h3 className={classes.shopBarName}>{shop.name}</h3>
           <IoCallOutline className={classes.callIcon} size="30px" />
         </div>
- 
+
         {shopsInfo.map((shopInfo, index) => (
           <Chat
             key={index}
@@ -143,7 +148,7 @@ const Detail = ({ data }) => {
           <span className={classes.informationSpan}>O</span>ther Memo
         </h2>
         <FadeUp>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
+          <div className={classes.boxList}>
             <Box flag={card}>
               <AiFillCreditCard className={classes.informationIcon} />
               <p className={classes.creditCardText}>{shop.card}</p>
@@ -207,12 +212,11 @@ const Detail = ({ data }) => {
         width="100%"
         height="400"
         frameBorder="0"
-        allowFullScreen=""
         className={classes.map}
       ></iframe>
       <div style={{ display: "flex", alignItems: "center" }}>
         <AiFillHome />
-        <Link href="/" className={classes.homeLink}>
+        <Link href="/">
           &lt;Homeに戻る
         </Link>
       </div>

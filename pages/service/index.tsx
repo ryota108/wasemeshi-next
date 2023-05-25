@@ -97,11 +97,14 @@ const Service = () => {
             <Avatar
               alt="Ryota"
               src="../../images/gentleman-min.png"
-              sx={{ width: 100, height: 100, background:"white",margin:"10px auto" }}
+              sx={{
+                width: 100,
+                height: 100,
+                background: "white",
+                margin: "10px auto",
+              }}
             />
-            <h1 className={classes.aboutMeName}>
-              Ryota
-            </h1>
+            <h1 className={classes.aboutMeName}>Ryota</h1>
             <div className={classes.textArea}>
               <p className={classes.aboutMeText}>
                 当サイトを制作、運営しているRyotaと申します。大学生から始めたプログラミングをどうすれば、誰かのために活かせるか考えた結果、このサイトのアイデアが浮かび約半年の開発期間を経てリリースすることができました。これからも少しでも多くの人にワセメシの魅力がさらに広がりますよう開発者として努めてまいります。

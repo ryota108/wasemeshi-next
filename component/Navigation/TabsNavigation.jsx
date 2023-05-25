@@ -29,10 +29,6 @@ export default function ScrollableTabsButtonForce() {
         <Tab icon={<BentoIcon sx={{width:"80px"}}/>}label="Bento" sx={{fontSize:"10px"}}/>
         <Tab icon={<EmojiFoodBeverageIcon sx={{width:"80px"}}/>}label="Cafe" sx={{fontSize:"10px"}}/>
         <Tab icon={<SportsBarIcon sx={{width:"80px"}}/>}label="Beer" sx={{fontSize:"10px"}}/>
-        {/* <Tab label="Item Four" />
-        <Tab label="Item Five" />
-        <Tab label="Item Six" />
-        <Tab label="Item Seven" /> */}
       </Tabs>
     </Box>
   );

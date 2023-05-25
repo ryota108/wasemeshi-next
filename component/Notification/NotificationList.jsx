@@ -2,8 +2,9 @@ import React from "react";
 import { client } from "../../libs/client";
 import { useEffect, useState } from "react";
 import style from "../../styles/Notification.module.css"
-import Link from "next/link";
 import Notification from "./Notification";
+
+
 
 const NotificationList = () => {
   const [newsList, setNewsList] = useState([]);

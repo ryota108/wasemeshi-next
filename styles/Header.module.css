@@ -202,18 +202,29 @@
     height: 900px;
     background-color: white;
   }
-  .menu-border {
-    width: 300px;
-    opacity: 0.8;
+  .menuBorder {
+    width: 80%;
+    margin-right: 20%;
     border-width: 1px 0 0 0;
   }
   .menuItems {
     font-weight: 700;
     list-style: none;
+    font-size: 1.2rem;
+    font-family: "El Messiri", sans-serif;
   }
+
+  .menuItems::first-letter {
+    color:#871b28
+  }
+
   .menuSubItems {
-    font-size: 12px;
+    font-size: 1rem;
     font-weight: 700;
+    list-style: none;
+    margin-left: 20px;
+    align-items: center;
+    font-family: "El Messiri", sans-serif;
   }
   .mobileMenuIcon > span {
     background-color: black;

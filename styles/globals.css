@@ -219,11 +219,6 @@ a {
     height: 900px;
     background-color: white;
   }
-  .menu-border {
-    width: 300px;
-    opacity: 0.8;
-    border-width: 1px 0 0 0;
-  }
   .global-content {
     width: 100%;
     display: block;

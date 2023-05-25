@@ -73,30 +73,25 @@ const Header: React.FC = () => {
               <Link href="/">Home</Link>
             </li>
             <div className="flex">
-              <li onClick={mobileMenuHandler} className={classes.menuItems}>
-                <a href="#search" className="menu-subItems">
+              <li onClick={mobileMenuHandler} className={classes.menuSubItems}>
                   <AiOutlineSearch />
                   Search&gt;
-                </a>
               </li>
-              <li style={{ marginLeft: "20px" }} onClick={mobileMenuHandler}>
-                <a href="#map" className="menu-subItems">
+              <li className={classes.menuSubItems} onClick={mobileMenuHandler}>
                   <FaMapMarkerAlt />
                   Map&gt;
-                </a>
               </li>
             </div>
             <hr color="#871b28" className={classes.menuBorder} />
             <li onClick={mobileMenuHandler} className={classes.menuItems}>
               <Link href="/service">Service</Link>
             </li>
-            <hr color="#871b28" className="menu-border" />
+            <hr color="#871b28" className={classes.menuBorder} />
             <li onClick={mobileMenuHandler} className={classes.menuItems}>
               <Link href="/Information">Information</Link>
             </li>
-            <hr color="#871b28" className="menu-border" />
+            <hr color="#871b28" className={classes.menuBorder} />
             <li className={classes.menuItems}>Contact</li>
-            <hr color="#871b28" className="menu-border" />
             <li className={classes.menuItems}>
               <a
                 href="https://twitter.com/Wasemeshi1"

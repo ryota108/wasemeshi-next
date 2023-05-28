@@ -13,7 +13,6 @@ import {
   categoryInitialState,
   moneyInitialState,
 } from "../../utils/reducer";
-import { display } from "@mui/system";
 
 const Category = (props) => {
   const [reset, setReset] = useState(false);

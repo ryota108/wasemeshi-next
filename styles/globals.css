@@ -23,7 +23,6 @@ a {
 .shop-card {
   margin-right: 10px;
   margin-top: 10px;
-  /* box-shadow: 5px -3px 10px 0px rgb(0 0 0 / 50%); */
   box-shadow: 0 2px 4px rgba(3, 3, 3, 0.09);
   width: 300px;
   height: 500px;
@@ -31,7 +30,6 @@ a {
 }
 .shop-card:hover {
   margin-top: -5px;
-  /* box-shadow: 13px 11px 11px 0px rgb(0 0 0 / 50%); */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
   transition: all 0.5s;
 }
@@ -45,7 +43,6 @@ a {
   box-shadow: 2px 3px 4px rgba(3, 3, 3, 1);
   width: 300px;
   height: 300px;
-  /* border-radius: 15px; */
 }
 .shop-img:hover {
   filter: brightness(60%);
@@ -103,10 +100,7 @@ a {
 .shopCardCatch{
   font-family: "Shippori Mincho B1","游明朝", serif;
 }
-/* p {
-  font-family: "Scheherazade New", serif;
-  font-family: "Shippori Mincho B1", serif;
-} */
+
 
 a {
   font-family: "Scheherazade New", serif;

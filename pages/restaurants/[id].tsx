@@ -10,9 +10,11 @@ import FadeUp from "../../component/UI/FadeUp";
 import Link from "next/link";
 import classes from "../../styles/detail.module.css";
 import Header from "../../component/Header/Header";
+import { useRouter } from 'next/router';
 import Chat from "../../component/UI/Chat";
 import InformationList from "../../component/UI/InformationList";
 import Box from "../../component/UI/Box";
+import Seo from "../../component/SEO/Seo";
 const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場&type=credit_card`;
 
 type ShopsInfoType = {
@@ -34,6 +36,10 @@ const Detail = ({ data }) => {
   const searchString: SearchStringFuncType = (paragraph, search) => {
     return paragraph.includes(search);
   };
+
+  const router = useRouter()
+
+
   const shop = data.results.shop[0];
 
   const card = searchString(shop.card, "利用可");
@@ -78,8 +84,22 @@ const Detail = ({ data }) => {
     return member === "" ? "未確認" : `最大${member}人`;
   };
 
+
+  //Unitテスト　ロジックのテスト　APIから取得した情報が画面に渡っているか？
+  //関数をテストしてあげればいい　→ 　きちんとロジックを出来ているか　インプット（キーワード）→ キーワードが入ったエンドポイントが叩けているか
+  // APIがエラーの際にはどういう挙動をするのか　jest/React-test-component
+
+
   return (
     <>
+      <Seo
+        pageTitle={shop.name}
+        pageDescription={shop.genre.catch}
+        pageImg={shop.photo.pc.l}
+        pagePath={router.asPath}
+        pageImgWidth={1280}
+        pageImgHeight={960}
+      />
       <Header />
       <div className={classes.imgBx}>
         <img src="/images/waseda.jfif" />
@@ -216,9 +236,7 @@ const Detail = ({ data }) => {
       ></iframe>
       <div style={{ display: "flex", alignItems: "center" }}>
         <AiFillHome />
-        <Link href="/">
-          &lt;Homeに戻る
-        </Link>
+        <Link href="/">&lt;Homeに戻る</Link>
       </div>
     </>
   );

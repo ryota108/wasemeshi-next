@@ -1,10 +1,14 @@
 import { useInView } from "react-intersection-observer";
-import classes from "../../styles/FadeUp.module.css";
-const FadeUp = (props) => {
+
+type Props = {
+  children: React.ReactNode;
+};
+
+const FadeUp: React.FC<Props> = ({ children }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <div ref={ref} className={inView ? "fadeUp" : "initialFadeUp"}>
-      {props.children}
+      {children}
     </div>
   );
 };

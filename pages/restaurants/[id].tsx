@@ -10,11 +10,20 @@ import FadeUp from "../../component/UI/FadeUp";
 import Link from "next/link";
 import classes from "../../styles/detail.module.css";
 import Header from "../../component/Header/Header";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import Chat from "../../component/UI/Chat";
 import InformationList from "../../component/UI/InformationList";
 import Box from "../../component/UI/Box";
 import Seo from "../../component/SEO/Seo";
+import Footer from "../../component/Footer/Footer";
+import {
+  TwitterShareButton,
+  FacebookShareButton,
+  LineShareButton,
+  TwitterIcon,
+  FacebookIcon,
+  LineIcon,
+} from "react-share";
 const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場&type=credit_card`;
 
 type ShopsInfoType = {
@@ -37,8 +46,7 @@ const Detail = ({ data }) => {
     return paragraph.includes(search);
   };
 
-  const router = useRouter()
-
+  const router = useRouter();
 
   const shop = data.results.shop[0];
 
@@ -84,11 +92,9 @@ const Detail = ({ data }) => {
     return member === "" ? "未確認" : `最大${member}人`;
   };
 
-
   //Unitテスト　ロジックのテスト　APIから取得した情報が画面に渡っているか？
   //関数をテストしてあげればいい　→ 　きちんとロジックを出来ているか　インプット（キーワード）→ キーワードが入ったエンドポイントが叩けているか
   // APIがエラーの際にはどういう挙動をするのか　jest/React-test-component
-
 
   return (
     <>
@@ -226,7 +232,7 @@ const Detail = ({ data }) => {
         </h1>
         <img src="/images/mapHuman-min.png" width="125px" />
       </div>
-
+      <div id="map">
       <iframe
         src={`https://maps.google.com/maps?output=embed&q=${shop.name}&${shop.address}ll=${shop.lat},${shop.allowfullScreenlng}&t=m&hl=ja&z=18`}
         width="100%"
@@ -234,10 +240,8 @@ const Detail = ({ data }) => {
         frameBorder="0"
         className={classes.map}
       ></iframe>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <AiFillHome />
-        <Link href="/">&lt;Homeに戻る</Link>
       </div>
+      <Footer shareURL={`https://wasemeshi-next.vercel.app${router.asPath}`} />
     </>
   );
 };

@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "component/Category/Category.js"  ],
+, "component/Category/Category.tsx"  ],
   "exclude": [
     "node_modules"
   ]

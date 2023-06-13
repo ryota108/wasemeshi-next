@@ -2,6 +2,11 @@ import fetch from "node-fetch";
 
 const defaultEndpoint = `https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${process.env.API_KEY}&format=json&keyword=高田馬場`;
 
+//search.jsのテストを書いてあげる
+// fetchが期待している引数で呼ばれているかをチェックする　spyOn
+// パターンに応じてテストしてあげる
+// E2Eテストでもいいかも
+
 const handler = async (req, res) => {
   const queryParams = {
     keyword: req.query.keyword,

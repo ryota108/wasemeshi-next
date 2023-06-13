@@ -14,6 +14,10 @@ import {
   moneyInitialState,
 } from "../../utils/reducer";
 
+//クリックした際にdispatchが呼ばれるかのテスト dispatchがきちんと上手く呼べれている　typeがきちんと変わっているか　Unitテストは分けて考える
+// categoryState＝＞モック化して　クラス名が変更されているかを見る
+//外部APIに依存 =>
+
 const Category = (props) => {
   const [reset, setReset] = useState(false);
   const resetStateHandler = () => {
@@ -62,9 +66,11 @@ const Category = (props) => {
           onClick={() => {
             categoryDispatch({ type: "CAFE" });
           }}
+          data-testid="category-list"
           className={classes.categoryList}
         >
           <div
+          data-testid="category-div"
             className={`${
               categoryState.cafe
                 ? classes.clickedCategoryBtn

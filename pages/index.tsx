@@ -22,6 +22,36 @@ export async function getServerSideProps() {
   };
 }
 
+type ShopType = {
+  name: string;
+  catch: string;
+  capacity: number;
+  non_smoking: string;
+  id: string;
+  photo: {
+    pc: {
+      l: string;
+    };
+  };
+  budget: {
+    name: string;
+  };
+};
+
+type CategoryValueType = {
+  meat: boolean;
+  cafe: boolean;
+  noodle: boolean;
+  izkaya: boolean;
+  chinese: boolean;
+  oneCoin: boolean;
+  twoCoin: boolean;
+  oneBill: boolean;
+  twoBill: boolean;
+  manyBill: boolean;
+};
+
+
 export default function Home({ data }) {
   const { ref, inView } = useInView({ delay: 1000 });
   const [reset, setReset] = useState(false);
@@ -32,7 +62,7 @@ export default function Home({ data }) {
     shop: defaultShops = [],
   } = data.results;
 
-  const [categoryValue, setCategoryValue] = useState({
+  const [categoryValue, setCategoryValue] = useState<CategoryValueType>({
     meat: false,
     cafe: false,
     noodle: false,
@@ -44,22 +74,6 @@ export default function Home({ data }) {
     twoBill: false,
     manyBill: false,
   });
-
-  type ShopType = {
-    name: string;
-    catch: string;
-    capacity: number;
-    non_smoking: string;
-    id: string;
-    photo: {
-      pc: {
-        l: string;
-      };
-    };
-    budget: {
-      name: string;
-    };
-  };
 
   const [shop, updateShops] = useState<ShopType[]>(defaultShops);
   const [page, updatePage] = useState({
@@ -201,7 +215,9 @@ export default function Home({ data }) {
     e.preventDefault();
 
     const { currentTarget = {} } = e;
-    const fields = Array.from(currentTarget?.elements);
+    const fields = Array.from(
+      currentTarget?.elements
+    ) as Array<HTMLInputElement>;
     const fieldQuery = fields.find((field) => field.name === "query");
     const value = fieldQuery.value || "";
     setKeyword(value);
@@ -255,7 +271,6 @@ export default function Home({ data }) {
           alt="ホットペッパー Webサービス"
           width="135"
           height="17"
-          border="0"
           title="ホットペッパー Webサービス"
         />
       </a>

@@ -66,7 +66,7 @@ const Category = (props) => {
           onClick={() => {
             categoryDispatch({ type: "CAFE" });
           }}
-          data-testid="category-list"
+          id="cafe"
           className={classes.categoryList}
         >
           <div
@@ -88,6 +88,7 @@ const Category = (props) => {
           onClick={() => {
             categoryDispatch({ type: "MEAT" });
           }}
+          id="meat"
           className={classes.categoryList}
         >
           <div
@@ -108,6 +109,7 @@ const Category = (props) => {
           onClick={() => {
             categoryDispatch({ type: "NOODLE" });
           }}
+          id="ramen"
           className={classes.categoryList}
         >
           <div
@@ -128,6 +130,7 @@ const Category = (props) => {
           onClick={() => {
             categoryDispatch({ type: "IZAKAYA" });
           }}
+          id="izakaya"
           className={classes.categoryList}
         >
           <div
@@ -145,6 +148,7 @@ const Category = (props) => {
           onClick={() => {
             categoryDispatch({ type: "CHINESE" });
           }}
+          id="chinese"
           className={classes.categoryList}
         >
           <div
@@ -171,6 +175,7 @@ const Category = (props) => {
           className={`${
             moneyState.oneCoin ? classes.moneyBoxClicked : classes.moneyBox
           }`}
+          id="oneCoin"
           onClick={() => {
             moneyDispatch({ type: "ONE_COIN" });
           }}
@@ -182,6 +187,7 @@ const Category = (props) => {
           className={`${
             moneyState.twoCoin ? classes.moneyBoxClicked : classes.moneyBox
           }`}
+          id="twoCoin"
           onClick={() => {
             moneyDispatch({ type: "TWO_COIN" });
           }}
@@ -193,6 +199,7 @@ const Category = (props) => {
           className={`${
             moneyState.oneBill ? classes.moneyBoxClicked : classes.moneyBox
           }`}
+          id="oneBill"
           onClick={() => {
             moneyDispatch({ type: "ONE_BILL" });
           }}
@@ -204,6 +211,7 @@ const Category = (props) => {
           className={`${
             moneyState.twoBill ? classes.moneyBoxClicked : classes.moneyBox
           }`}
+          id="twoBill"
           onClick={() => {
             moneyDispatch({ type: "TWO_BILL" });
           }}
@@ -212,6 +220,7 @@ const Category = (props) => {
           <p className={classes.moneyExplainLong}>¥3001~￥4000</p>
         </li>
         <li
+         id="manyBill"
           className={`${
             moneyState.manyBill ? classes.moneyBoxClicked : classes.moneyBox
           }`}

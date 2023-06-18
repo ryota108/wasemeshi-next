@@ -22,6 +22,36 @@ export async function getServerSideProps() {
   };
 }
 
+type ShopType = {
+  name: string;
+  catch: string;
+  capacity: number;
+  non_smoking: string;
+  id: string;
+  photo: {
+    pc: {
+      l: string;
+    };
+  };
+  budget: {
+    name: string;
+  };
+};
+
+type CategoryValueType = {
+  meat: boolean;
+  cafe: boolean;
+  noodle: boolean;
+  izkaya: boolean;
+  chinese: boolean;
+  oneCoin: boolean;
+  twoCoin: boolean;
+  oneBill: boolean;
+  twoBill: boolean;
+  manyBill: boolean;
+};
+
+
 export default function Home({ data }) {
   const { ref, inView } = useInView({ delay: 1000 });
   const [reset, setReset] = useState(false);
@@ -32,19 +62,20 @@ export default function Home({ data }) {
     shop: defaultShops = [],
   } = data.results;
 
-  const [categoryValue, setCategoryValue] = useState({
+  const [categoryValue, setCategoryValue] = useState<CategoryValueType>({
     meat: false,
     cafe: false,
     noodle: false,
-    izkaya:false,
-    chinese:false,
+    izkaya: false,
+    chinese: false,
     oneCoin: false,
     twoCoin: false,
     oneBill: false,
     twoBill: false,
     manyBill: false,
   });
-  const [shop, updateShops] = useState(defaultShops);
+
+  const [shop, updateShops] = useState<ShopType[]>(defaultShops);
   const [page, updatePage] = useState({
     results_available: results_available,
     results_returned: results_returned,
@@ -128,14 +159,16 @@ export default function Home({ data }) {
     request();
   }, [page.results_start]);
 
+  console.log(data);
+
   useEffect(() => {
     const params = {
       twoCoin: categoryValue.twoCoin,
       noodle: categoryValue.noodle,
       meat: categoryValue.meat,
       cafe: categoryValue.cafe,
-      izkaya:categoryValue.izkaya,
-      chinese:categoryValue.chinese,
+      izkaya: categoryValue.izkaya,
+      chinese: categoryValue.chinese,
       oneCoin: categoryValue.oneCoin,
       oneBill: categoryValue.oneBill,
       twoBill: categoryValue.twoBill,
@@ -182,7 +215,9 @@ export default function Home({ data }) {
     e.preventDefault();
 
     const { currentTarget = {} } = e;
-    const fields = Array.from(currentTarget?.elements);
+    const fields = Array.from(
+      currentTarget?.elements
+    ) as Array<HTMLInputElement>;
     const fieldQuery = fields.find((field) => field.name === "query");
     const value = fieldQuery.value || "";
     setKeyword(value);
@@ -198,13 +233,13 @@ export default function Home({ data }) {
       <Notification />
       <form onSubmit={handlerOnSubmitSearch} className="search-form-007">
         <label>
-        <input
-          type="search"
-          name="query"
-          placeholder="キーワードを入力して下さい"
-        />
+          <input
+            type="search"
+            name="query"
+            placeholder="キーワードを入力して下さい"
+          />
         </label>
-        <button aria-label="検索"/>
+        <button aria-label="検索" />
       </form>
       <Category onReset={resetHandler} onSubmit={submitCategoryHandler} />
       <div className="flex">
@@ -236,7 +271,6 @@ export default function Home({ data }) {
           alt="ホットペッパー Webサービス"
           width="135"
           height="17"
-          border="0"
           title="ホットペッパー Webサービス"
         />
       </a>

@@ -411,7 +411,31 @@
   flex-wrap: wrap;
 }
 
+.layoutTitle {
+  margin-left: 85px;
+}
+
+.bookingButton {
+  font-family: "Shippori Mincho B1", "游明朝", serif;
+  position: relative;
+  background-color: #871b28;
+  border: 1px solid black;
+  font-weight: 600;
+  padding: 10px 40px;
+  margin: 10px auto;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s;
+  color: white;
+  text-decoration: none !important;
+  font-size: 20px;
+  margin-left: 22%;
+}
+
 @media screen and (max-width: 700px) {
+  .layoutTitle {
+    margin-left: 0px;
+  }
   .restaurant-logo {
     width: 0px;
   }
@@ -732,7 +756,7 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 70%;
+    top: 52%;
     right: 78%;
     animation: finish ease-in-out 5.5s;
     animation-fill-mode: forwards;

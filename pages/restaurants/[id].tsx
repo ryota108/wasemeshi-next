@@ -48,6 +48,10 @@ const Detail = ({ data }) => {
   const midnight = searchString(shop.midnight, "営業している");
   const reserved = searchString(shop.charter, "貸切可");
 
+  const bookingHandler = () =>{
+    router.push(`https://www.hotpepper.jp/str${shop.id}/yoyaku`)
+  }
+
   const shopsInfo: ShopsInfoType[] = [
     { info: "予算" },
     { info: shop.budget.name, isShop: true, shopImg: shop.logo_image },
@@ -162,7 +166,6 @@ const Detail = ({ data }) => {
           />
         ))}
       </ul>
-
       <ul className={classes.otherMemo}>
         <h2 className={classes.informationTitle}>
           <span className={classes.informationSpan}>O</span>ther Memo
@@ -220,6 +223,10 @@ const Detail = ({ data }) => {
           </div>
         </FadeUp>
       </ul>
+      <h2 className={classes.informationTitle}>
+          <span className={`${classes.informationSpan} ${classes.layoutTitle}`}>B</span>ooking
+        </h2>
+        <button className={classes.bookingButton} onClick={bookingHandler}>予約画面に進む</button>
       <div className={classes.mapSectionTitle}>
         <h1>
           <span className={classes.mapSpan}>M</span>ap

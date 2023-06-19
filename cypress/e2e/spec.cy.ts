@@ -6,13 +6,6 @@
 //url決め打ちで書く方法がある
 // HotPapperのAPIをキャッシュする<=Supabaseに全部とってあげる
 describe("検索に関するテスト", () => {
-  it("詳細", () => {
-    cy.viewport(1440, 900);
-    cy.visit("localhost:3000");
-    cy.get('input[type="search"]').type("ちばちゃん");
-    cy.get('button[aria-label="検索"]').click();
-    cy.get(".Card_button__eHZO8").eq(2).click({ force: true });
-  });
   context("キーワード検索", () => {
     it("ちばちゃん", () => {
       cy.viewport(1440, 900);

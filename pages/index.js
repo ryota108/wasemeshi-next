@@ -251,13 +251,13 @@ export default function Home({ data }) {
         ))}
       </ul>
 
-      <Pagination
+      {isDesktop ?  <Pagination
         count={25}
         page={pageNumber}
         className="pageNation"
         color="primary"
         onChange={handleChange}
-      />
+      /> :""}
 
       {isDesktop ? "" : <div ref={ref}></div>}
       {!inView && !isDesktop && (

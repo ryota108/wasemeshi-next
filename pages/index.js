@@ -2,12 +2,10 @@ import Category from "../component/Category/Category";
 import FadeUp from "../component/UI/FadeUp";
 import Explain from "../component/Explain/Explain";
 import Header from "../component/Header/Header";
-import { useMedia } from "react-use";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
-import Pagination from "@mui/material/Pagination";
 import Card from "../component/UI/Card";
 import Notification from "../component/Notification/NotificationList";
 
@@ -27,10 +25,6 @@ export async function getServerSideProps() {
 export default function Home({ data }) {
   const { ref, inView } = useInView({ delay: 1000 });
   const [reset, setReset] = useState(false);
-  const [pageNumber, setPageNumber] = useState(1);
-  const handleChange = (event, value) => {
-    setPageNumber(value);
-  };
   const {
     results_available = 0,
     results_start = 1,
@@ -38,14 +32,12 @@ export default function Home({ data }) {
     shop: defaultShops = [],
   } = data.results;
 
-  const isDesktop = useMedia("(min-width:800px)", false);
-
   const [categoryValue, setCategoryValue] = useState({
     meat: false,
     cafe: false,
     noodle: false,
-    izkaya: false,
-    chinese: false,
+    izkaya:false,
+    chinese:false,
     oneCoin: false,
     twoCoin: false,
     oneBill: false,
@@ -65,15 +57,15 @@ export default function Home({ data }) {
   const theme = createTheme({
     palette: {
       primary: {
-        light: "#871b28",
+        light: "#757ce8",
         main: "#871b28",
-        dark: "#871b28",
+        dark: "#002884",
         contrastText: "#fff",
       },
       secondary: {
         light: "#ff7961",
-        main: "#871b28",
-        dark: "871b28",
+        main: "#f44336",
+        dark: "#ba000d",
         contrastText: "#000",
       },
     },
@@ -142,8 +134,8 @@ export default function Home({ data }) {
       noodle: categoryValue.noodle,
       meat: categoryValue.meat,
       cafe: categoryValue.cafe,
-      izkaya: categoryValue.izkaya,
-      chinese: categoryValue.chinese,
+      izkaya:categoryValue.izkaya,
+      chinese:categoryValue.chinese,
       oneCoin: categoryValue.oneCoin,
       oneBill: categoryValue.oneBill,
       twoBill: categoryValue.twoBill,
@@ -183,20 +175,6 @@ export default function Home({ data }) {
     });
   }, [inView]);
 
-  useEffect(() => {
-    if (pageNumber === 0) return;
-    updateShops([]);
-    updatePage((prev) => {
-      return {
-        results_start: pageNumber * 10,
-      };
-    });
-  }, [pageNumber]);
-
-  const pageNationHandler = (num) => {
-    setPageNumber(num);
-  };
-
   const resetHandler = () => {
     setKeyword("");
   };
@@ -220,13 +198,13 @@ export default function Home({ data }) {
       <Notification />
       <form onSubmit={handlerOnSubmitSearch} className="search-form-007">
         <label>
-          <input
-            type="search"
-            name="query"
-            placeholder="キーワードを入力して下さい"
-          />
+        <input
+          type="search"
+          name="query"
+          placeholder="キーワードを入力して下さい"
+        />
         </label>
-        <button aria-label="検索" />
+        <button aria-label="検索"/>
       </form>
       <Category onReset={resetHandler} onSubmit={submitCategoryHandler} />
       <div className="flex">
@@ -250,19 +228,8 @@ export default function Home({ data }) {
           </FadeUp>
         ))}
       </ul>
-
-      {isDesktop ?  <Pagination
-        count={25}
-        page={pageNumber}
-        className="pageNation"
-        color="primary"
-        onChange={handleChange}
-      /> :""}
-
-      {isDesktop ? "" : <div ref={ref}></div>}
-      {!inView && !isDesktop && (
-        <img src="/images/loading.gif" className="loadingSpinner" />
-      )}
+      <div ref={ref}></div>
+      {!inView && <img src="/images/loading.gif" className="loadingSpinner" />}
       <a href="http://webservice.recruit.co.jp/">
         <img
           src="http://webservice.recruit.co.jp/banner/hotpepper-s.gif"

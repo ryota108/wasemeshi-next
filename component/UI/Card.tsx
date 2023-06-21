@@ -37,7 +37,7 @@ const Card: React.FC<Props> = ({
   }
 
   return (
-    <Box className={style.card}>
+    <Box className={style.card} onClick={clickHandler}>
       <div className={style.cardImg}>
         <img src={image} />
       </div>

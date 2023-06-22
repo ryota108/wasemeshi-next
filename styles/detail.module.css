@@ -415,21 +415,36 @@
   margin-left: 85px;
 }
 
-.bookingButton {
+.Button {
   font-family: "Shippori Mincho B1", "游明朝", serif;
   position: relative;
-  background-color: #871b28;
   border: 1px solid black;
   font-weight: 600;
-  padding: 10px 40px;
   margin: 10px auto;
   cursor: pointer;
   border-radius: 30px;
   transition: all 0.3s;
-  color: white;
   text-decoration: none !important;
   font-size: 20px;
   margin-left: 22%;
+}
+
+.icon {
+  position: relative;
+  top: 3px;
+  right:10px
+}
+
+.menuButton {
+  background-color: white;
+  padding: 10px 40px;
+  color:black;
+}
+
+.bookingButton {
+  background-color: #871b28;
+  color: white;
+  padding: 10px 32px;
 }
 
 @media screen and (max-width: 700px) {

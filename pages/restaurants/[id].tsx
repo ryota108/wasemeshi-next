@@ -6,11 +6,13 @@ import { FiWifiOff } from "react-icons/fi";
 import { AiFillHome } from "react-icons/ai";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
+import {MdMenuBook} from "react-icons/md"
 import FadeUp from "../../component/UI/FadeUp";
 import Link from "next/link";
 import classes from "../../styles/detail.module.css";
 import Header from "../../component/Header/Header";
 import { useRouter } from 'next/router';
+import {AiFillCalendar} from "react-icons/ai"
 import Chat from "../../component/UI/Chat";
 import InformationList from "../../component/UI/InformationList";
 import Box from "../../component/UI/Box";
@@ -51,6 +53,11 @@ const Detail = ({ data }) => {
   const bookingHandler = () =>{
     router.push(`https://www.hotpepper.jp/str${shop.id}/yoyaku`)
   }
+
+  const menuHandler = () =>{
+    router.push(`https://www.hotpepper.jp/str${shop.id}/food`)
+  }
+
 
   const shopsInfo: ShopsInfoType[] = [
     { info: "予算" },
@@ -224,9 +231,10 @@ const Detail = ({ data }) => {
         </FadeUp>
       </ul>
       <h2 className={classes.informationTitle}>
-          <span className={`${classes.informationSpan} ${classes.layoutTitle}`}>B</span>ooking
+          <span className={`${classes.informationSpan} ${classes.layoutTitle}`}>A</span>ction
         </h2>
-        <button className={classes.bookingButton} onClick={bookingHandler}>予約画面に進む</button>
+        <button className={`${classes.Button} ${classes.bookingButton}`} onClick={bookingHandler}>予約画面に進む</button>
+        <button className={`${classes.Button} ${classes.menuButton}`} onClick={menuHandler} ><MdMenuBook className={classes.icon} size={25}/>料理を見る</button>
       <div className={classes.mapSectionTitle}>
         <h1>
           <span className={classes.mapSpan}>M</span>ap
